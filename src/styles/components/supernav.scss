@@ -1,0 +1,42 @@
+.links-container {
+  @apply col-start-3 col-end-4 row-start-2 row-end-3 py-6;
+
+  .supernav {
+    @apply flex justify-between font-semibold
+      lg:text-xs
+      md:hidden;
+
+    .item-without-children {
+      @apply mr-2 cursor-pointer px-2 py-1;
+    }
+
+    .item-with-children {
+      @apply mr-2 cursor-pointer px-2 py-1 flex items-center;
+
+      .dropdown-arrow {
+        @apply w-4 h-4 text-red-600 ml-2 transform -rotate-90;
+      }
+
+      .children-container {
+        @apply hidden;
+      }
+    }
+
+    // The Actuall render
+    .children-container {
+      @apply py-6 px-4 shadow-2xl bg-white rounded-lg;
+
+      columns: 3;
+      column-gap: 50px;
+    }
+
+    li {
+      margin-right: theme("spacing.2");
+    }
+  }
+
+  .menu-container {
+    @apply hidden justify-end
+      md:flex;
+  }
+}

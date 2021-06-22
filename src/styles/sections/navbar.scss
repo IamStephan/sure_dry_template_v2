@@ -96,23 +96,4 @@
     @apply relative col-start-2 col-end-3 row-start-1 row-end-3 my-8
       xl:row-start-2 xl:row-end-3 xl:my-5;
   }
-
-  .links-container {
-    @apply col-start-3 col-end-4 row-start-2 row-end-3 py-8;
-
-    .links {
-      @apply flex justify-between font-semibold
-        lg:text-xs
-        md:hidden;
-
-      li {
-        margin-right: theme("spacing.2");
-      }
-    }
-
-    .menu-container {
-      @apply hidden justify-end
-        md:flex;
-    }
-  }
 }

@@ -6,6 +6,7 @@
   .bg-index {
     z-index: -1;
   }
+
   .max-w-screen-sm {
     max-width: 640px;
   }

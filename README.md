@@ -12,7 +12,7 @@ Converting The Basement Doctor's website to new design from Adobe XD design spec
 **Clone the project**
 
 ```bash
-  git clone https://github.com/IamStephan/the_basement_doctor_template_v2 project-name
+  git clone https://github.com/IamStephan/sure_dry_template_v2 project-name
 ```
 
 **Go to the project directory**
@@ -45,7 +45,7 @@ _or_
   yarn start
 ```
 
-**Rest cache**
+**Reset cache**
 
 ```bash
   npm run clean

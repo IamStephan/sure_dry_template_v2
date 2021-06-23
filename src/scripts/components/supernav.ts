@@ -12,6 +12,7 @@ function InitSuperNav(): void {
       return null;
     },
     offset: [0, 18],
+    maxWidth: "auto",
     placement: "bottom",
     allowHTML: true,
     interactive: true,

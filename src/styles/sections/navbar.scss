@@ -5,12 +5,12 @@
   display: grid;
   grid-template-columns:
     minmax(theme("spacing.8"), auto) minmax(
-      calculateFractionWidth(0.45, $screen-lg),
-      calculateFractionWidth(0.45, $screen-2xl)
+      calculateFractionWidth(0.4, $screen-lg),
+      calculateFractionWidth(0.4, $screen-2xl)
     )
     minmax(
-      calculateFractionWidth(0.55, $screen-lg),
-      calculateFractionWidth(0.55, $screen-2xl)
+      calculateFractionWidth(0.6, $screen-lg),
+      calculateFractionWidth(0.6, $screen-2xl)
     )
     minmax(theme("spacing.8"), auto);
   grid-template-rows: auto auto;
@@ -19,7 +19,7 @@
     grid-template-columns:
       minmax(theme("spacing.8"), auto)
       4fr
-      5fr
+      10fr
       // this translates to 44fr and 55fr respectively
       minmax(theme("spacing.8"), auto);
   }

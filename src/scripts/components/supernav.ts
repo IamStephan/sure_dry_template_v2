@@ -1,7 +1,11 @@
 import tippy from "tippy.js";
 
 function InitSuperNav(): void {
-  tippy(".item-with-children", {
+  /**
+   * DESKTOP
+   * ==========
+   */
+  const Menu = tippy(".item-with-children", {
     content: (ref) => {
       const childrenContainer = ref.querySelector(".children-container");
 
@@ -17,6 +21,18 @@ function InitSuperNav(): void {
     allowHTML: true,
     interactive: true,
     duration: 50,
+    touch: true,
+  });
+
+  /**
+   * MOBILE
+   */
+  const MenuButton = document.querySelector<HTMLButtonElement>("#menu-button");
+
+  MenuButton.addEventListener("click", () => {
+    const Supernav = document.querySelector<HTMLDivElement>(".supernav");
+
+    Supernav.classList.toggle("show");
   });
 }
 

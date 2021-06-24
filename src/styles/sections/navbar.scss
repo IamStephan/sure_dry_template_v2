@@ -2,6 +2,7 @@
 @import "../utils/breakpoints.vars.scss";
 
 .navigation-layout {
+  @apply relative;
   display: grid;
   grid-template-columns:
     minmax(theme("spacing.8"), auto) minmax(
@@ -14,6 +15,7 @@
     )
     minmax(theme("spacing.8"), auto);
   grid-template-rows: auto auto;
+  z-index: 99999999999;
 
   @screen xl {
     grid-template-columns:

@@ -6,6 +6,13 @@
       lg:text-xs
       md:hidden;
 
+    // Meant for mobile use
+    @screen md {
+      &.show {
+        @apply flex absolute bottom-0 flex-col transform translate-y-full bg-white left-0 right-0;
+      }
+    }
+
     .item-without-children {
       @apply mr-2 cursor-pointer px-2 py-1;
     }
@@ -22,9 +29,25 @@
       }
     }
 
+    .item-without-children,
+    .item-with-children {
+      @apply md:text-base md:flex md:justify-between md:px-4 md:py-2;
+
+      * {
+        @apply md:text-base;
+      }
+    }
+
     // The Actuall render
     .children-container {
-      @apply py-6 px-10 shadow-2xl bg-white rounded-lg w-auto;
+      @apply py-6 px-10 shadow-2xl bg-white rounded-lg w-auto ring-1 ring-gray-900 ring-opacity-10
+        md:px-4;
+      z-index: 9999999;
+      transform: translateY(-18px);
+
+      * {
+        @apply md:text-base;
+      }
 
       .header {
         @apply font-bold mb-2 hover:underline uppercase cursor-pointer inline-block;
@@ -44,6 +67,10 @@
 
         @screen lg {
           columns: 2;
+        }
+
+        @screen md {
+          columns: 1;
         }
 
         overflow: hidden; /* Fix for firefox and IE 10-11  */

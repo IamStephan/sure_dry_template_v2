@@ -55,7 +55,6 @@ $socialFooter = '
   <!--
       Navigation bar
       ==============
-        - Ignore the actual navbar and try to use placeholders where it makes sense
     -->
     <nav>
       <!-- Top navigation -->
@@ -70,45 +69,72 @@ $socialFooter = '
           <div class="cta">
             <span class="cta-text"> 1-800-379-3788 </span>
             <span class="cta-text-small">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 12A10.002 10.002 0 0012 2v2a8.003 8.003 0 017.391 4.938A8 8 0 0120 12h2zM2 10V5a1 1 0 011-1h5a1 1 0 011 1v4a1 1 0 01-1 1H6a8 8 0 008 8v-2a1 1 0 011-1h4a1 1 0 011 1v5a1 1 0 01-1 1h-5C7.373 22 2 16.627 2 10z" fill="#fff"/><path d="M17.543 9.704A5.99 5.99 0 0118 12h-1.8A4.199 4.199 0 0012 7.8V6a6 6 0 015.543 3.704z" fill="#fff"/></svg>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M22 12C22 10.6868 21.7413 9.38647 21.2388 8.1731C20.7362 6.95996 19.9997 5.85742 19.0711 4.92896C18.1425 4.00024 17.0401 3.26367 15.8268 2.76123C14.6136 2.25854 13.3132 2 12 2V4C13.0506 4 14.0909 4.20703 15.0615 4.60889C16.0321 5.01099 16.914 5.60034 17.6569 6.34326C18.3997 7.08594 18.989 7.96802 19.391 8.93848C19.7931 9.90918 20 10.9495 20 12H22Z"
+                fill="white"
+              />
+              <path
+                d="M2 10V5C2 4.44775 2.44772 4 3 4H8C8.55228 4 9 4.44775 9 5V9C9 9.55225 8.55228 10 8 10H6C6 14.4182 9.58173 18 14 18V16C14 15.4478 14.4477 15 15 15H19C19.5523 15 20 15.4478 20 16V21C20 21.5522 19.5523 22 19 22H14C7.37259 22 2 16.6274 2 10Z"
+                fill="white"
+              />
+              <path
+                d="M17.5433 9.70386C17.8448 10.4319 18 11.2122 18 12H16.2C16.2 11.4485 16.0914 10.9023 15.8803 10.3928C15.6692 9.88306 15.3599 9.42017 14.9698 9.03027C14.5798 8.64014 14.1169 8.33081 13.6073 8.11963C13.0977 7.90869 12.5515 7.80005 12 7.80005V6C12.7879 6 13.5681 6.15527 14.2961 6.45679C15.024 6.7583 15.6855 7.2002 16.2426 7.75732C16.7998 8.31445 17.2418 8.97583 17.5433 9.70386Z"
+                fill="white"
+              />
+            </svg>
               Call Now
             </span>
           </div>
         </div>
 
-        <div class="links-container">
-          <ul class="links">
-            <li>
-              <a>Services</a>
-            </li>
-            <li>
-              <a>Our Work</a>
-            </li>
-            <li>
-              <a>About Us</a>
-            </li>
-            <li>
-              <a>Service Area</a>
-            </li>
-            <li>
-              <a>Free Estimate</a>
-            </li>
-          </ul>
-          <div class="menu-container">
-            <button class="menu">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 6a1 1 0 011-1h18a1 1 0 110 2H3a1 1 0 01-1-1zm0 6.032a1 1 0 011-1h18a1 1 0 110 2H3a1 1 0 01-1-1zm1 5.032a1 1 0 100 2h18a1 1 0 000-2H3z" fill="currentColor"/></svg>
-            </button>
-          </div>
-        </div>
+        <!-- Super nav -->
+        <?php
+        $superNav = new nav();
+        $superNav->superTemplateId = 20;
+        $superNav->superMode = 'top';
+        $superNav->superItems = array(
+            'Services' => array(
+                'class' => 'columned',
+                'target' => 'services'
+            ),
+            17856 => array(
+                'class' => 'simple',
+                'children' => array(32810,114693,17850,17853,17857,17859,40112,29188,31194,231032)
+            ),
+            32810 => array(
+                'grandchildren' => false
+            ),
+            'Service Area' => array(
+                'target' => 'map',
+            ),
+            'Free Quote' => array(
+                'class' => 'quote',
+                'target' => 'contact'
+            ),
+            43049 => array(
+                'grandchildren' => true
+            )
+        );
+
+        echo $superNav->generateSuperMarkup();
+        ?>
 
         <div class="logo-container">
           <img
             class="object-contain object-left img"
-            src="	https://cdn.treehouseinternetgroup.com/cms_images/101/logo.f311f897.png"
+            src="https://cdn.treehouseinternetgroup.com/cms_images/101/logo.f311f897.png"
           />
         </div>
       </section>
     </nav>
+    
 
   <main>
     <!-- Hero Section -->
@@ -756,6 +782,7 @@ $socialFooter = '
       </section>
     </footer>
 
-</body>
+    <script src="	https://cdn.treehouseinternetgroup.com/cms_images/101/supernav.js"></script>
+  </body>
 
 </html>

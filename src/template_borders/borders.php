@@ -48,7 +48,6 @@ $socialFooter = '
 
   <!-- Styles (Mix global and paged import in Template css)-->
   <link rel="stylesheet" type="text/css" href="/inc/sb-styles.css?custom_template_id=129">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body id="app">
@@ -70,11 +69,9 @@ $socialFooter = '
             <span class="cta-text"> 1-800-379-3788 </span>
             <span class="cta-text-small">
             <svg
-              width="24"
-              height="24"
+              class='phone'
               viewBox="0 0 24 24"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M22 12C22 10.6868 21.7413 9.38647 21.2388 8.1731C20.7362 6.95996 19.9997 5.85742 19.0711 4.92896C18.1425 4.00024 17.0401 3.26367 15.8268 2.76123C14.6136 2.25854 13.3132 2 12 2V4C13.0506 4 14.0909 4.20703 15.0615 4.60889C16.0321 5.01099 16.914 5.60034 17.6569 6.34326C18.3997 7.08594 18.989 7.96802 19.391 8.93848C19.7931 9.90918 20 10.9495 20 12H22Z"
@@ -782,7 +779,7 @@ $socialFooter = '
       </section>
     </footer>
 
-    <script src="	https://cdn.treehouseinternetgroup.com/cms_images/101/supernav.js"></script>
+    <script src="https://cdn.treehouseinternetgroup.com/cms_images/101/main.js"></script>
   </body>
 
 </html>

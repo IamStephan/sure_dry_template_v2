@@ -1,114 +1,163 @@
-.links-container {
-  @apply col-start-3 col-end-4 row-start-2 row-end-3 py-6;
+.supernav {
+  @apply col-start-3 col-end-4 row-start-2 row-end-3 py-2;
 
-  .supernav {
-    @apply flex justify-between font-semibold
-      lg:text-xs
-      md:hidden;
+  .level-1.large {
+    @apply flex justify-between md:hidden;
 
-    // Meant for mobile use
-    @screen md {
-      &.show {
-        @apply flex absolute bottom-0 flex-col transform translate-y-full bg-white left-0 right-0;
-      }
-    }
+    > li {
+      @apply font-semibold relative py-4 lg:text-sm;
 
-    .item-without-children {
-      @apply mr-2 cursor-pointer px-2 py-1;
-    }
-
-    .item-with-children {
-      @apply mr-2 cursor-pointer px-2 py-1 flex items-center;
-
-      .dropdown-arrow {
-        @apply w-4 h-4 text-red-600 ml-2;
+      a {
+        @apply hover:underline cursor-pointer;
       }
 
-      .children-container {
-        @apply hidden;
-      }
-    }
-
-    .item-without-children,
-    .item-with-children {
-      @apply md:text-base md:flex md:justify-between md:px-4 md:py-2;
-
-      * {
-        @apply md:text-base;
-      }
-    }
-
-    // The Actuall render
-    .children-container {
-      @apply py-6 px-10 shadow-2xl bg-white rounded-lg w-auto ring-1 ring-gray-900 ring-opacity-10
-        md:px-4;
-      z-index: 9999999;
-      transform: translateY(-18px);
-
-      * {
-        @apply md:text-base;
+      &.without-children {
+        // @apply hover:underline;
       }
 
-      .header {
-        @apply font-bold mb-2 hover:underline uppercase cursor-pointer inline-block;
-      }
+      &.with-children {
+        @apply flex items-center space-x-2;
 
-      &.simple {
-        .header {
-          @apply mb-4 inline-block;
-        }
-      }
-
-      &.columned {
-        $column-gap: theme("spacing.12");
-
-        columns: 3;
-        column-gap: $column-gap;
-
-        @screen lg {
-          columns: 2;
+        &:hover {
+          .level-2 {
+            @apply block;
+          }
         }
 
-        @screen md {
-          columns: 1;
+        .dropdown {
+          @apply w-3 text-primary;
         }
 
-        overflow: hidden; /* Fix for firefox and IE 10-11  */
-        -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-        page-break-inside: avoid; /* Firefox */
-        break-inside: avoid; /* IE 10+ */
-        break-inside: avoid-column;
+        .level-2 {
+          @apply hidden absolute bottom-0 left-1/2 transform translate-y-full -translate-x-1/2 bg-white py-4 px-6 rounded-md shadow-2xl ring-1 ring-gray-900 ring-opacity-10;
 
-        a {
-          @apply cursor-pointer;
-        }
+          > li {
+            @apply font-bold whitespace-nowrap;
+          }
 
-        ul,
-        li {
-          overflow: hidden; /* Fix for firefox and IE 10-11  */
-          -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-          page-break-inside: avoid; /* Firefox */
-          break-inside: avoid; /* IE 10+ */
-          break-inside: avoid-column;
-        }
+          .return-level-1 {
+            @apply hidden;
+          }
 
-        .submenu {
-          @apply pl-4 text-sm mb-4;
+          &.simple {
+            li:not(:last-child) {
+              @apply mb-3;
+            }
+          }
 
-          li {
-            @apply mb-1 font-light hover:underline;
+          &.columned {
+            columns: 3;
+            column-gap: theme("spacing.20");
+
+            @screen xl {
+              columns: 2;
+            }
+
+            @screen lg {
+              columns: 1;
+            }
+
+            > li {
+              overflow: hidden; /* Fix for firefox and IE 10-11  */
+              -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+              page-break-inside: avoid; /* Firefox */
+              break-inside: avoid; /* IE 10+ */
+              break-inside: avoid-column;
+            }
+
+            .level-3 {
+              @apply mb-4 mt-1 pl-6;
+              > li {
+                @apply font-light text-sm;
+              }
+            }
           }
         }
       }
     }
+  }
 
-    li {
-      margin-right: theme("spacing.2");
+  .level-1.small {
+    @apply hidden absolute bg-white w-full left-0 bottom-0 transform translate-y-full flex-col transition duration-500;
+
+    &.show {
+      @apply flex;
+    }
+
+    &.nest {
+      @apply transform translate-y-full -translate-x-full;
+    }
+
+    > li {
+      @apply font-semibold lg:text-sm;
+
+      a {
+        @apply hover:underline py-3 px-4 cursor-pointer block;
+      }
+
+      &.without-children {
+      }
+
+      &.with-children {
+        @apply flex items-center justify-between;
+
+        > a {
+          @apply flex-1;
+        }
+
+        .dropdown {
+          @apply w-8 h-8 p-1 mr-4 text-primary;
+
+          svg {
+            @apply h-full w-auto transform -rotate-90;
+          }
+        }
+
+        .level-2 {
+          @apply hidden absolute top-0 w-full right-0 transform translate-x-full bg-white;
+
+          > li {
+            @apply font-bold;
+          }
+
+          .return-level-1 {
+            @apply flex px-4 py-2 items-center space-x-4 font-semibold focus:outline-none;
+
+            svg {
+              @apply w-6 h-6 transform rotate-90 text-primary;
+            }
+          }
+
+          &.show {
+            @apply flex flex-col;
+          }
+
+          &.simple {
+            > li {
+              @apply font-semibold;
+            }
+          }
+
+          .level-3 {
+            @apply pl-6;
+            > li {
+              @apply font-light text-sm;
+
+              a {
+                @apply py-2 px-4;
+              }
+            }
+          }
+        }
+      }
     }
   }
 
-  .menu-container {
-    @apply hidden justify-end
-      md:flex;
+  .menu-button-container {
+    @apply hidden md:flex md:justify-end;
+
+    .menu-button {
+      @apply px-5 py-3 -mr-5;
+    }
   }
 }

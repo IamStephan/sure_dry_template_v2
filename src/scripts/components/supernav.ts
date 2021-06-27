@@ -1,39 +1,58 @@
-import tippy from "tippy.js";
+/**
+ * Mobile navigation
+ * ==================
+ * I can't use the focus-within selector since it's
+ * not supported ni Edge 15
+ *
+ */
 
-function InitSuperNav(): void {
-  /**
-   * DESKTOP
-   * ==========
-   */
-  const Menu = tippy(".item-with-children", {
-    content: (ref) => {
-      const childrenContainer = ref.querySelector(".children-container");
+function InitMobileNav(): void {
+  const ToggleMenuButton =
+    document.querySelector<HTMLButtonElement>("#menu-button");
+  const RootNode = document.querySelector<HTMLUListElement>(".level-1.small");
+  const SubMenus = RootNode.querySelectorAll<HTMLLIElement>(".with-children");
 
-      if (childrenContainer) {
-        return childrenContainer;
-      }
+  function resetAll() {
+    RootNode.classList.remove("nest");
+    SubMenus.forEach((element) => {
+      element.querySelector(".level-2").classList.remove("show");
+    });
+  }
 
-      return null;
-    },
-    offset: [0, 18],
-    maxWidth: "auto",
-    placement: "bottom",
-    allowHTML: true,
-    interactive: true,
-    duration: 50,
-    touch: true,
+  function resetSubMenus() {
+    SubMenus.forEach((element) => {
+      element.querySelector(".level-2").classList.remove("show");
+    });
+  }
+
+  ToggleMenuButton.addEventListener("click", () => {
+    if (RootNode.classList.contains("show")) {
+      resetAll();
+    }
+    RootNode.classList.toggle("show");
   });
 
-  /**
-   * MOBILE
-   */
-  const MenuButton = document.querySelector<HTMLButtonElement>("#menu-button");
+  SubMenus.forEach((element) => {
+    const MoveButton = element.querySelector<HTMLDivElement>(".dropdown");
+    const List = element.querySelector<HTMLUListElement>(".level-2");
 
-  MenuButton.addEventListener("click", () => {
-    const Supernav = document.querySelector<HTMLDivElement>(".supernav");
+    function goDeeper() {
+      resetSubMenus();
+      RootNode.classList.add("nest");
+      List.classList.add("show");
+    }
 
-    Supernav.classList.toggle("show");
+    function goShallow() {
+      RootNode.classList.remove("nest");
+    }
+
+    MoveButton.addEventListener("click", goDeeper);
+
+    List.querySelector<HTMLButtonElement>(".return-level-1").addEventListener(
+      "click",
+      goShallow
+    );
   });
 }
 
-InitSuperNav();
+InitMobileNav();

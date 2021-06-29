@@ -647,7 +647,21 @@ $socialFooter = '
       </div>
     </section>
 
-    <!-- Contact/More info Section -->
+    <?php
+        }
+    ?>
+    
+    <?php
+        if($pageType == "CONTENT") {
+    ?>
+    <!-- Content Section -->
+    <section class="content space-section">
+      <?php echo $extraPageData; ?>
+    </section>
+    <?php
+        }
+    ?>
+    <!-- Service Area Section -->
     <section class="service-areas">
       <div class="service-areas-map-container">
         <img class="object-cover img" src="https://cdn.treehouseinternetgroup.com/cms_images/101/map.678dc703.png" />
@@ -677,21 +691,6 @@ $socialFooter = '
         </p>
       </div>
     </section>
-    <?php
-        }
-    ?>
-    
-    <?php
-        if($pageType == "CONTENT") {
-    ?>
-    <!-- Content Section -->
-    <section class="content space-section">
-      <?php echo $extraPageData; ?>
-    </section>
-    <?php
-        }
-    ?>
-    
   </main>
 
   <!-- TODO: make this dynamic -->

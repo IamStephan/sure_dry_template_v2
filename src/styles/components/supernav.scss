@@ -78,18 +78,30 @@
   }
 
   .level-1.small {
-    @apply hidden absolute bg-white w-full left-0 bottom-0 transform translate-y-full flex-col transition duration-500;
+    @apply hidden absolute bg-white w-full max-w-full left-0 bottom-0 transform translate-y-full flex-col transition duration-500;
 
     &.show {
       @apply flex;
     }
 
     &.nest {
-      @apply transform translate-y-full -translate-x-full;
+      .level-2 {
+        @apply opacity-0 pointer-events-none transform -translate-y-5;
+
+        &.show {
+          @apply opacity-100 pointer-events-auto transform translate-y-0;
+        }
+      }
+    }
+
+    &:not(.nest) {
+      .level-2 {
+        @apply opacity-0 pointer-events-none transform -translate-y-4;
+      }
     }
 
     > li {
-      @apply font-semibold lg:text-sm;
+      @apply font-semibold lg:text-sm overflow-x-hidden;
 
       a {
         @apply hover:underline py-3 px-4 cursor-pointer block;
@@ -109,12 +121,12 @@
           @apply w-8 h-8 p-1 mr-4 text-primary;
 
           svg {
-            @apply h-full w-auto transform -rotate-90;
+            @apply h-full w-auto;
           }
         }
 
         .level-2 {
-          @apply hidden absolute top-0 w-full right-0 transform translate-x-full bg-white;
+          @apply absolute top-0 w-full right-0 bg-white transition duration-200 flex flex-col z-50 pointer-events-none;
 
           > li {
             @apply font-bold;
@@ -124,12 +136,8 @@
             @apply flex px-4 py-2 items-center space-x-4 font-semibold focus:outline-none;
 
             svg {
-              @apply w-6 h-6 transform rotate-90 text-primary;
+              @apply w-6 h-6 transform rotate-180 text-primary;
             }
-          }
-
-          &.show {
-            @apply flex flex-col;
           }
 
           &.simple {

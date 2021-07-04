@@ -4,11 +4,13 @@ global $thePage, $cmsPageData;
 
 
   $extraPageData = $cmsPageData["page.body_content"];
+  $cmsDataToLog = $cmsPageData;
   
   // This gets injected into the body tag at the end
   // Content should be in the main tag inside the body
   // accessibility and seo
   $cmsPageData["page.body_content"] = "";
+  $cmsPageData["page.bottom_content"] = "";
 ?>
 
 <?php
@@ -66,9 +68,35 @@ $socialFooter = '
   <meta property="og:description"
     content="Sure Dry Basement Systems is the Basement Systems dealer in Wausau, Marshfield, Oshkosh, Appleton, Green Bay, Rhinelander, and Ashland areas." />
 
-  <!-- Styles (Mix global and paged import in Template css)-->
+  <!-- Styles (Global)-->
   <link rel="stylesheet" type="text/css" href="/inc/sb-styles.css?custom_template_id=129">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Selected Scripts -->
+  <!-- For now load the home page styles for everypage type (DEV TEMP!!) -->
+  <?php
+    if($pageType == "CONTENT") {
+  ?>
+    <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/7a7700a0e1d7b4d39a1049e0c64f41e8025d12d1/suredry_content_template.css">
+  <?php
+    }
+  ?>
+
+  <!-- Selected styles -->
+  <!-- For now load the home page styles for everypage type (DEV TEMP!!) -->
+  <?php
+    if($pageType == "HOME") {
+  ?>
+    <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/fcf42e967389a28008412cc41bee392aa94fc4b5/suredry_homepage_template.css">
+  <?php
+    }
+  ?>
+  <?php
+    if($pageType == "CONTENT") {
+  ?>
+    <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/7a7700a0e1d7b4d39a1049e0c64f41e8025d12d1/suredry_content_template.css">
+  <?php
+    }
+  ?>
 </head>
 
 <body id="app">
@@ -655,8 +683,21 @@ $socialFooter = '
         if($pageType == "CONTENT") {
     ?>
     <!-- Content Section -->
+    <section class="content-template-article space-section">
+      <nav aria-label="Breadcrumb" class="content-template-breadcrumbs">
+        [[breadcrumbs]]
+      </nav>
+
+      <aside class="content-template-silo">
+        [[single_silo_nav]]
+      </aside>
+
+      <article class="content-template-main">
+        <?php echo $extraPageData; ?>
+      </article>
+    </section>
     <section class="content space-section">
-      <?php echo $extraPageData; ?>
+      
     </section>
     <?php
         }

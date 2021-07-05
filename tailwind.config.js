@@ -1,7 +1,7 @@
 module.exports = {
   mode: "jit",
   purge: ["./src/**/*.html", "./src/**/*.svg", "./src/**/*.js"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
     fontFamily: {
       sans: ["Montserrat", "sans-serif"],
@@ -18,10 +18,10 @@ module.exports = {
 
       "min-3xl": { min: "1919px" },
       "min-2xl": { min: "1535px" },
-      'min-xl': { min: "1279px" },
-      'min-lg': { min: "1023px" },
-      'min-md': { min: "767px" },
-      'min-sm': { min: "639px" }
+      "min-xl": { min: "1279px" },
+      "min-lg": { min: "1023px" },
+      "min-md": { min: "767px" },
+      "min-sm": { min: "639px" },
     },
     extend: {
       colors: {

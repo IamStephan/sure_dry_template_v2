@@ -45,6 +45,50 @@ $socialFooter = '
     }
 ?>
 
+<?php
+    // Silo component images
+    $siloComponentImage = "https://www.suredrybasements.com/core/images/templates/bambam/nav-service-icons/nav-icon-concrete-red.png";
+
+    switch(true) {
+      case stristr($thePage,"about-us"):
+        break;
+
+      case stristr($thePage,"basement-waterproofing"):
+        break;
+
+      case stristr($thePage,"commercial-foundation-repair"):
+        break;
+
+      case stristr($thePage,"foundation-repair"):
+        break;
+
+      case stristr($thePage,"concrete-lifting"):
+        break;
+
+      case stristr($thePage,"crawl-space-repair"):
+        break;
+
+      case stristr($thePage,"insulation"):
+        break;
+
+      case stristr($thePage,"sump-pump"):
+        break;
+
+      case stristr($thePage,"radon-gas-mitigation"):
+        break;
+
+      case stristr($thePage,"flood-vents"):
+        break;
+
+      case stristr($thePage,"service-area"):
+        break;
+
+      default:
+        $siloComponentImage = "https://www.suredrybasements.com/core/images/templates/bambam/nav-service-icons/nav-icon-concrete-red.png";
+        break;
+    }
+?>
+
 
 
 <!DOCTYPE html>
@@ -69,31 +113,20 @@ $socialFooter = '
     content="Sure Dry Basement Systems is the Basement Systems dealer in Wausau, Marshfield, Oshkosh, Appleton, Green Bay, Rhinelander, and Ashland areas." />
 
   <!-- Styles (Global)-->
-  <link rel="stylesheet" type="text/css" href="/inc/sb-styles.css?custom_template_id=129">
+  <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/2fdacd52c177278f2542eb2ce6343de1a44000b0/suredry_global_template.css">
 
-    <!-- Selected Scripts -->
-  <!-- For now load the home page styles for everypage type (DEV TEMP!!) -->
-  <?php
-    if($pageType == "CONTENT") {
-  ?>
-    <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/7a7700a0e1d7b4d39a1049e0c64f41e8025d12d1/suredry_content_template.css">
-  <?php
-    }
-  ?>
-
-  <!-- Selected styles -->
-  <!-- For now load the home page styles for everypage type (DEV TEMP!!) -->
+  <!-- Selected scripts and styles -->
   <?php
     if($pageType == "HOME") {
   ?>
-    <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/fcf42e967389a28008412cc41bee392aa94fc4b5/suredry_homepage_template.css">
+    <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/2fdacd52c177278f2542eb2ce6343de1a44000b0/suredry_homepage_template.css">
   <?php
     }
   ?>
   <?php
     if($pageType == "CONTENT") {
   ?>
-    <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/7a7700a0e1d7b4d39a1049e0c64f41e8025d12d1/suredry_content_template.css">
+    <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/2fdacd52c177278f2542eb2ce6343de1a44000b0/suredry_content_template.css">
   <?php
     }
   ?>
@@ -173,10 +206,12 @@ $socialFooter = '
         ?>
 
         <div class="logo-container">
-          <img
-            class="object-contain object-left img"
-            src="https://cdn.treehouseinternetgroup.com/cms_images/101/logo.f311f897.png"
-          />
+          <a href='/'>
+            <img
+              class="object-contain- object-left- img"
+              src="https://cdn.treehouseinternetgroup.com/cms_images/101/logo.f311f897.png"
+            />
+          </a>
         </div>
       </section>
     </nav>
@@ -190,7 +225,7 @@ $socialFooter = '
     <!-- Hero Section -->
     <section class="hero-section-layout space-section">
       <div class="hero-bg">
-        <img class="object-cover object-bottom img"
+        <img class="object-cover- object-bottom- img"
           src="https://cdn.treehouseinternetgroup.com/cms_images/101/hero-bg.f69949dd.jpg" />
       </div>
 
@@ -228,21 +263,21 @@ $socialFooter = '
       <div class="images-container">
         <div class="image-set-container">
           <div class="image-one">
-            <img class="object-cover img"
+            <img class="object-cover- img"
               src="https://cdn.treehouseinternetgroup.com/cms_images/101/man-1.186848b3.png" />
           </div>
           <div class="image-two">
-            <img class="object-cover img"
+            <img class="object-cover- img"
               src="https://cdn.treehouseinternetgroup.com/cms_images/101/man-2.c0057ac5.png" />
           </div>
         </div>
         <div class="image-set-container">
           <div class="image-three">
-            <img class="object-cover img"
+            <img class="object-cover- img"
               src="https://cdn.treehouseinternetgroup.com/cms_images/101/hands-1.57e0fade.png" />
           </div>
           <div class="image-four">
-            <img class="object-cover img"
+            <img class="object-cover- img"
               src="https://cdn.treehouseinternetgroup.com/cms_images/101/hands-2.4a235842.png" />
           </div>
         </div>
@@ -256,7 +291,7 @@ $socialFooter = '
       <div class="solutions-blocks-container">
         <div class="block">
           <div class="image-container">
-            <img class="object-cover img"
+            <img class="object-cover- img"
               src="https://cdn.treehouseinternetgroup.com/cms_images/101/cracks.8e22bff8.png" />
           </div>
 
@@ -284,7 +319,7 @@ $socialFooter = '
 
         <div class="block">
           <div class="image-container">
-            <img class="object-cover img"
+            <img class="object-cover- img"
               src="https://cdn.treehouseinternetgroup.com/cms_images/101/wet_basement.1025483f.png" />
           </div>
 
@@ -312,7 +347,7 @@ $socialFooter = '
 
         <div class="block">
           <div class="image-container">
-            <img class="object-cover img"
+            <img class="object-cover- img"
               src="	https://cdn.treehouseinternetgroup.com/cms_images/101/crawl_space.6cc595a0.png" />
           </div>
 
@@ -340,7 +375,7 @@ $socialFooter = '
 
         <div class="block">
           <div class="image-container">
-            <img class="object-cover img"
+            <img class="object-cover- img"
               src="https://cdn.treehouseinternetgroup.com/cms_images/101/sinking_concrete.6735f8cd.png" />
           </div>
 
@@ -395,7 +430,7 @@ $socialFooter = '
     <section class="social-proof space-section">
       <div class="social-proof-bg-container">
         <img src="https://cdn.treehouseinternetgroup.com/cms_images/101/people.e6fbb089.jpg"
-          class="object-cover social-proof-bg img" />
+          class="object-cover- social-proof-bg img" />
         <div class="social-proof-bg-overlay"></div>
       </div>
 
@@ -544,11 +579,11 @@ $socialFooter = '
         <div class="features-card-bg-reset"></div>
         <div class="features-card">
           <div class="featured-card-background-image">
-            <img class="object-cover img" src="https://cdn.treehouseinternetgroup.com/cms_images/101/noise.c99464a9.png" />
+            <img class="object-cover- img" src="https://cdn.treehouseinternetgroup.com/cms_images/101/noise.c99464a9.png" />
           </div>
 
           <div class="feautures-card-main-image">
-            <img class="object-cover img" src="https://cdn.treehouseinternetgroup.com/cms_images/101/company-people.40c7fc02.png" />
+            <img class="object-cover- img" src="https://cdn.treehouseinternetgroup.com/cms_images/101/company-people.40c7fc02.png" />
           </div>
 
           <div class="featured-card-content">
@@ -689,15 +724,39 @@ $socialFooter = '
       </nav>
 
       <aside class="content-template-silo">
-        [[single_silo_nav]]
+        <div class="content-template-silo-menu">
+          <button id="silo-menu-button">
+            Open Menu
+            <span class="dropdown">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.34317 7.75732L4.92896 9.17154L12 16.2426L19.0711 9.17157L17.6569 7.75735L12 13.4142L6.34317 7.75732Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div class="content-template-silo-container" id="silo-container">
+          <div class="content-template-image-container">
+            <img
+              src="https://www.suredrybasements.com/core/images/templates/bambam/nav-service-icons/nav-icon-waterproof-red.png"
+            />
+          </div>
+          
+          [[single_silo_nav]]
+        </div>
       </aside>
 
       <article class="content-template-main">
         <?php echo $extraPageData; ?>
       </article>
-    </section>
-    <section class="content space-section">
-      
     </section>
     <?php
         }
@@ -705,7 +764,7 @@ $socialFooter = '
     <!-- Service Area Section -->
     <section class="service-areas">
       <div class="service-areas-map-container">
-        <img class="object-cover img" src="https://cdn.treehouseinternetgroup.com/cms_images/101/map.678dc703.png" />
+        <img class="object-cover- img" src="https://cdn.treehouseinternetgroup.com/cms_images/101/map.678dc703.png" />
       </div>
 
       <div class="service-areas-bg-container">
@@ -858,7 +917,15 @@ $socialFooter = '
       </section>
     </footer>
 
-    <script src="https://cdn.treehouseinternetgroup.com/cms_images/101/main.js"></script>
+    <script src="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/2fdacd52c177278f2542eb2ce6343de1a44000b0/main.js"></script>
+
+    <?php
+    if($pageType == "CONTENT") {
+    ?>
+      <script src="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/2fdacd52c177278f2542eb2ce6343de1a44000b0/silo.js"></script>
+    <?php
+      }
+    ?>
   </body>
 
 </html>

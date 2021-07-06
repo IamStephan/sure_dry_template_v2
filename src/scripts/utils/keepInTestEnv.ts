@@ -11,7 +11,7 @@ function KeepInTestEnv(): void {
 
   LinkTags.forEach((linkElem) => {
     linkElem.addEventListener("click", (ev) => {
-      const link = ev.target as HTMLAnchorElement;
+      const link = ev.currentTarget as HTMLAnchorElement;
 
       /**
        * First make sure there is a actual value present

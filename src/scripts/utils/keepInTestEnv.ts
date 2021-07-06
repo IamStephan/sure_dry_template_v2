@@ -4,6 +4,9 @@
  */
 
 function KeepInTestEnv(): void {
+  // Do not intercept in local enviroments
+  if (window.location.hostname === "localhost") return;
+
   const LinkTags = document.querySelectorAll<HTMLAnchorElement>("a[href]");
 
   LinkTags.forEach((linkElem) => {

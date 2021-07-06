@@ -1,10 +1,17 @@
 .breakout.breakout.breakout {
+  @apply max-w-sm;
+
   img {
     @apply min-sm:ml-0 min-sm:mt-0 min-sm:mr-0 min-sm:mb-0;
   }
 
   &.right {
-    @apply float-right min-sm:mb-2 min-sm:ml-2
+    @apply float-right min-sm:mb-4 min-sm:ml-4
+      sm:float-none;
+  }
+
+  &.left {
+    @apply float-left min-sm:mb-4 min-sm:mr-4
       sm:float-none;
   }
 }

@@ -25,6 +25,9 @@ function KeepInTestEnv(): void {
           link.attributes.getNamedItem("href").value +
           "?cache=0&dev_template=1&test=1";
       } else {
+        // I want to see what gets selected
+        console.log(link);
+
         // Make sure the user wants to leave the test enviroment
         if (
           !window.confirm(

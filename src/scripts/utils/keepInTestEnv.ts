@@ -8,12 +8,29 @@ function KeepInTestEnv(): void {
 
   LinkTags.forEach((linkElem) => {
     linkElem.addEventListener("click", (ev) => {
-      ev.preventDefault();
       const link = ev.target as HTMLAnchorElement;
 
-      window.location.href =
-        link.attributes.getNamedItem("href").value +
-        "?cache=0&dev_template=1&test=1";
+      /**
+       * First make sure there is a actual value present
+       * Sometimes the target event seems to attach itself
+       * to none anchor tags
+       */
+      if (link?.attributes?.getNamedItem?.("href")?.value) {
+        ev.preventDefault();
+
+        window.location.href =
+          link.attributes.getNamedItem("href").value +
+          "?cache=0&dev_template=1&test=1";
+      } else {
+        // Make sure the user wants to leave the test enviroment
+        if (
+          !window.confirm(
+            "This link could not be intercepted. Are you sure you want to leave the test enviroment?"
+          )
+        ) {
+          ev.preventDefault();
+        }
+      }
     });
   });
 }

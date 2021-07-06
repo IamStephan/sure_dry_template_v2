@@ -36,8 +36,9 @@
             (window.location.href =
               t.attributes.getNamedItem("href").value +
               "?cache=0&dev_template=1&test=1"))
-          : window.confirm(
+          : (console.log(t),
+            window.confirm(
               "This link could not be intercepted. Are you sure you want to leave the test enviroment?"
-            ) || e.preventDefault();
+            ) || e.preventDefault());
       });
     });

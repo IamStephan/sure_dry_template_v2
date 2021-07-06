@@ -12,15 +12,15 @@
   }),
     o.forEach((e) => {
       const l = e.querySelector(".dropdown"),
-        s = e.querySelector(".level-2");
+        c = e.querySelector(".level-2");
       l.addEventListener("click", function () {
         o.forEach((e) => {
           e.querySelector(".level-2").classList.remove("show");
         }),
           t.classList.add("nest"),
-          s.classList.add("show");
+          c.classList.add("show");
       }),
-        s
+        c
           .querySelector(".return-level-1")
           .addEventListener("click", function () {
             t.classList.remove("nest");
@@ -30,7 +30,7 @@
   "localhost" !== window.location.hostname &&
     document.querySelectorAll("a[href]").forEach((e) => {
       e.addEventListener("click", (e) => {
-        const t = e.target;
+        const t = e.currentTarget;
         t?.attributes?.getNamedItem?.("href")?.value
           ? (e.preventDefault(),
             (window.location.href =

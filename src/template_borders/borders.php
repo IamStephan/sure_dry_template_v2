@@ -113,20 +113,20 @@ $socialFooter = '
     content="Sure Dry Basement Systems is the Basement Systems dealer in Wausau, Marshfield, Oshkosh, Appleton, Green Bay, Rhinelander, and Ashland areas." />
 
   <!-- Styles (Global)-->
-  <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/45b25d45a7b11ea8476940dd98b95c7745d649be/suredry_global_template.css">
+  <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/f7097f7e070ba283a93c8ffbb4148ef837de0afd/suredry_global_template.css">
 
   <!-- Selected scripts and styles -->
   <?php
     if($pageType == "HOME") {
   ?>
-    <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/45b25d45a7b11ea8476940dd98b95c7745d649be/suredry_homepage_template.css">
+    <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/f7097f7e070ba283a93c8ffbb4148ef837de0afd/suredry_homepage_template.css">
   <?php
     }
   ?>
   <?php
     if($pageType == "CONTENT") {
   ?>
-    <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/45b25d45a7b11ea8476940dd98b95c7745d649be/suredry_content_template.css">
+    <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/f7097f7e070ba283a93c8ffbb4148ef837de0afd/suredry_content_template.css">
   <?php
     }
   ?>
@@ -917,12 +917,12 @@ $socialFooter = '
       </section>
     </footer>
 
-    <script src="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/45b25d45a7b11ea8476940dd98b95c7745d649be/main.js"></script>
+    <script src="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/f7097f7e070ba283a93c8ffbb4148ef837de0afd/main.js"></script>
 
     <?php
     if($pageType == "CONTENT") {
     ?>
-      <script src="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/45b25d45a7b11ea8476940dd98b95c7745d649be/silo.js"></script>
+      <script src="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/f7097f7e070ba283a93c8ffbb4148ef837de0afd/silo.js"></script>
     <?php
       }
     ?>

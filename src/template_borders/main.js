@@ -1,20 +1,20 @@
 !(function () {
   const e = document.querySelector("#menu-button"),
     t = document.querySelector(".level-1.small"),
-    c = t.querySelectorAll(".with-children");
+    o = t.querySelectorAll(".with-children");
   e.addEventListener("click", () => {
     t.classList.contains("show") &&
       (t.classList.remove("nest"),
-      c.forEach((e) => {
+      o.forEach((e) => {
         e.querySelector(".level-2").classList.remove("show");
       })),
       t.classList.toggle("show");
   }),
-    c.forEach((e) => {
+    o.forEach((e) => {
       const l = e.querySelector(".dropdown"),
         s = e.querySelector(".level-2");
       l.addEventListener("click", function () {
-        c.forEach((e) => {
+        o.forEach((e) => {
           e.querySelector(".level-2").classList.remove("show");
         }),
           t.classList.add("nest"),
@@ -27,12 +27,17 @@
           });
     });
 })(),
-  document.querySelectorAll("a[href]").forEach((e) => {
-    e.addEventListener("click", (e) => {
-      e.preventDefault();
-      const t = e.target;
-      window.location.href =
-        t.attributes.getNamedItem("href").value +
-        "?cache=0&dev_template=1&test=1";
+  "localhost" !== window.location.hostname &&
+    document.querySelectorAll("a[href]").forEach((e) => {
+      e.addEventListener("click", (e) => {
+        const t = e.target;
+        t?.attributes?.getNamedItem?.("href")?.value
+          ? (e.preventDefault(),
+            (window.location.href =
+              t.attributes.getNamedItem("href").value +
+              "?cache=0&dev_template=1&test=1"))
+          : window.confirm(
+              "This link could not be intercepted. Are you sure you want to leave the test enviroment?"
+            ) || e.preventDefault();
+      });
     });
-  });

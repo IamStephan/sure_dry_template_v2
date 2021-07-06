@@ -1,3 +1,7 @@
 .center {
   @apply flex justify-center my-12;
+
+  img {
+    @apply rounded shadow-md ring-1 ring-gray-900 ring-opacity-10;
+  }
 }

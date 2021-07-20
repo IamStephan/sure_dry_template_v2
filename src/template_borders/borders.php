@@ -113,20 +113,20 @@ $socialFooter = '
     content="Sure Dry Basement Systems is the Basement Systems dealer in Wausau, Marshfield, Oshkosh, Appleton, Green Bay, Rhinelander, and Ashland areas." />
 
   <!-- Styles (Global)-->
-  <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/f7097f7e070ba283a93c8ffbb4148ef837de0afd/suredry_global_template.css">
+  <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/sure_dry_template_v2/master/src/template_borders/template.css">
 
   <!-- Selected scripts and styles -->
   <?php
     if($pageType == "HOME") {
   ?>
-    <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/f7097f7e070ba283a93c8ffbb4148ef837de0afd/suredry_homepage_template.css">
+    <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/sure_dry_template_v2/master/src/template_borders/homepage.css">
   <?php
     }
   ?>
   <?php
     if($pageType == "CONTENT") {
   ?>
-    <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/f7097f7e070ba283a93c8ffbb4148ef837de0afd/suredry_content_template.css">
+    <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/sure_dry_template_v2/master/src/template_borders/content.css">
   <?php
     }
   ?>
@@ -919,12 +919,12 @@ $socialFooter = '
       </section>
     </footer>
 
-    <script src="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/f7097f7e070ba283a93c8ffbb4148ef837de0afd/main.js"></script>
+    <script src="https://min.gitcdn.link/repo/IamStephan/sure_dry_template_v2/master/src/template_borders/main.js"></script>
 
     <?php
     if($pageType == "CONTENT") {
     ?>
-      <script src="https://min.gitcdn.link/repo/IamStephan/c4f18bfd2fd253373929fd607c718c90/raw/f7097f7e070ba283a93c8ffbb4148ef837de0afd/silo.js"></script>
+      <script src="https://min.gitcdn.link/repo/IamStephan/sure_dry_template_v2/master/src/template_borders/silo.js"></script>
     <?php
       }
     ?>

@@ -755,7 +755,9 @@ $socialFooter = '
       </aside>
 
       <article class="content-template-main">
-        <?php echo $extraPageData; ?>
+      <?php } ?>
+        [[content]]
+        <?php if ($pageType == "CONTENT") { ?>
       </article>
     </section>
     <?php

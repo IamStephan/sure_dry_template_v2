@@ -2,15 +2,10 @@
 // this is here to prevent loading extra homepage content. Remove when we copy stuff into index
 global $thePage, $cmsPageData;
 
-
-  $extraPageData = $cmsPageData["page.body_content"];
-  $cmsDataToLog = $cmsPageData;
-  
-  // This gets injected into the body tag at the end
-  // Content should be in the main tag inside the body
-  // accessibility and seo
+ if($thePage == "index") {
   $cmsPageData["page.body_content"] = "";
   $cmsPageData["page.bottom_content"] = "";
+  }
 ?>
 
 <?php
@@ -710,12 +705,10 @@ $socialFooter = '
       </div>
     </section>
 
-    <?php
-        }
-    ?>
+    
     
     <?php
-        if($pageType == "CONTENT") {
+          } elseif ($pageType == "CONTENT") {
     ?>
     <!-- Content Section -->
     <section class="content-template-article space-section">
@@ -755,9 +748,9 @@ $socialFooter = '
       </aside>
 
       <article class="content-template-main">
-      <?php } ?>
-        [[content]]
-        <?php if ($pageType == "CONTENT") { ?>
+          <?php } ?>
+          [[content]]
+    <?php if ($pageType == "CONTENT") { ?>
       </article>
     </section>
     <?php

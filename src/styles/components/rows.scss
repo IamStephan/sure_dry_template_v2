@@ -1,0 +1,15 @@
+/**
+ * The way the rows are handled is weird.
+ * Rows with more than 4 items are split into
+ * more row containers.
+ *
+ * NOTE:
+ * =======
+ * A row container will not exceed 4 children
+ * and the last child will always have < 4 children
+ **/
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  @apply gap-x-6;
+}

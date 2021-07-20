@@ -1,5 +1,6 @@
 .breakout.breakout.breakout {
-  @apply max-w-sm;
+  // Got this from the old system
+  width: 300px;
 
   img {
     @apply min-sm:ml-0 min-sm:mt-0 min-sm:mr-0 min-sm:mb-0;

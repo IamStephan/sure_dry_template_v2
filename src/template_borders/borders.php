@@ -108,20 +108,20 @@ $socialFooter = '
     content="Sure Dry Basement Systems is the Basement Systems dealer in Wausau, Marshfield, Oshkosh, Appleton, Green Bay, Rhinelander, and Ashland areas." />
 
   <!-- Styles (Global)-->
-  <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/sure_dry_template_v2/master/src/template_borders/template.css">
+  <link rel="stylesheet" type="text/css" href="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/src/template_borders/template.css">
 
   <!-- Selected scripts and styles -->
   <?php
     if($pageType == "HOME") {
   ?>
-    <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/sure_dry_template_v2/master/src/template_borders/homepage.css">
+    <link rel="stylesheet" type="text/css" href="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/src/template_borders/homepage.css">
   <?php
     }
   ?>
   <?php
     if($pageType == "CONTENT") {
   ?>
-    <link rel="stylesheet" type="text/css" href="https://min.gitcdn.link/repo/IamStephan/sure_dry_template_v2/master/src/template_borders/content.css">
+    <link rel="stylesheet" type="text/css" href="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/src/template_borders/content.css">
   <?php
     }
   ?>
@@ -912,12 +912,12 @@ $socialFooter = '
       </section>
     </footer>
 
-    <script src="https://min.gitcdn.link/repo/IamStephan/sure_dry_template_v2/master/src/template_borders/main.js"></script>
+    <script src="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/src/template_borders/main.js"></script>
 
     <?php
     if($pageType == "CONTENT") {
     ?>
-      <script src="https://min.gitcdn.link/repo/IamStephan/sure_dry_template_v2/master/src/template_borders/silo.js"></script>
+      <script src="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/src/template_borders/silo.js"></script>
     <?php
       }
     ?>

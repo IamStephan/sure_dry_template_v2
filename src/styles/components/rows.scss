@@ -9,7 +9,5 @@
  * and the last child will always have < 4 children
  **/
 .row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  @apply gap-x-6;
+  @apply gap-6 grid grid-cols-4 lg:grid-cols-2 sm:grid-cols-1;
 }

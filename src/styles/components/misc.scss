@@ -1,3 +1,7 @@
 .border {
   @apply ring-1 ring-gray-900 ring-opacity-10 rounded-md;
 }
+
+.bg {
+  @apply bg-gray-50  rounded-md;
+}

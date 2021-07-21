@@ -2,7 +2,22 @@
   // Got this from the old system
   width: 300px;
 
-  @apply px-6;
+  // Apply padding to direct children
+  > * {
+    @apply px-5;
+  }
+
+  // negate padding to direct media children
+  > a,
+  > img,
+  > iframe {
+    @apply p-0;
+
+    // Nagate bottom border radius when there is content below it
+    &:not(:only-child):first-child {
+      @apply rounded-b-none;
+    }
+  }
 
   img {
     @apply min-sm:ml-0 min-sm:mt-0 min-sm:mr-0 min-sm:mb-0;

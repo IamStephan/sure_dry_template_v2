@@ -134,9 +134,14 @@
       lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4
       md:prose-sm;
 
+    // Reset styling on alll native tags
     hr {
       // Default spacing on desktop is way to big
-      @apply my-8;
+      @apply my-8 clear-both;
+    }
+
+    img {
+      @apply rounded ring-1 ring-gray-900 ring-opacity-10 w-full h-auto;
     }
   }
 }

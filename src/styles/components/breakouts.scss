@@ -2,6 +2,8 @@
   // Got this from the old system
   width: 300px;
 
+  @apply px-6;
+
   img {
     @apply min-sm:ml-0 min-sm:mt-0 min-sm:mr-0 min-sm:mb-0;
   }

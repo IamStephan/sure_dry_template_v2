@@ -6,7 +6,7 @@
  *
  */
 
-function InitMobileNav(): void {
+function InitMobileNav() {
   const ToggleMenuButton =
     document.querySelector<HTMLButtonElement>("#menu-button");
   const RootNode = document.querySelector<HTMLUListElement>(".level-1.small");

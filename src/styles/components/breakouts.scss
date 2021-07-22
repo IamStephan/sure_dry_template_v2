@@ -9,6 +9,7 @@
 
   // negate padding to direct media children
   > a,
+  > a img,
   > img,
   > iframe {
     @apply p-0;

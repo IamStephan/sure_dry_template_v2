@@ -8,6 +8,10 @@
 
     li {
       @apply my-0 pl-0;
+
+      img {
+        height: 100%;
+      }
     }
   }
 }

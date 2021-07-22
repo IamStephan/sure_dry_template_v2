@@ -2,6 +2,16 @@
   // Got this from the old system
   width: 300px;
 
+  @screen sm {
+    max-width: 100% !important;
+    width: 100% !important;
+
+    > * {
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+  }
+
   // Apply padding to direct children
   > * {
     @apply px-5;
@@ -24,7 +34,7 @@
     @apply min-sm:ml-0 min-sm:mt-0 min-sm:mr-0 min-sm:mb-0;
   }
 
-  &.right {
+  &.right.right.right {
     @apply float-right min-sm:mb-4 min-sm:ml-4
       sm:float-none;
   }

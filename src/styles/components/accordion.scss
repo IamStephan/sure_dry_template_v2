@@ -1,0 +1,11 @@
+.accordion.accordion.accordion {
+  @apply my-0;
+
+  .accordion-navigation {
+    @apply pl-0 list-none;
+
+    &::before {
+      display: none;
+    }
+  }
+}

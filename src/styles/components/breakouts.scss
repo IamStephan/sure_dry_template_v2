@@ -25,7 +25,7 @@
     @apply p-0;
 
     // Nagate bottom border radius when there is content below it
-    &:not(:only-child):first-child {
+    &:first-child {
       @apply rounded-b-none;
     }
   }
@@ -43,4 +43,8 @@
     @apply float-left min-sm:mb-4 min-sm:mr-4
       sm:float-none;
   }
+}
+
+.clear {
+  clear: both;
 }

@@ -466,10 +466,10 @@ $cursor-text-value: text !default;
 
     // Miscellaneous useful HTML classes
     .left {
-      float: left !important;
+      float: left;
     }
     .right {
-      float: right !important;
+      float: right;
     }
     .clearfix {
       @include clearfix;

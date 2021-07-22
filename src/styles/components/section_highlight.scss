@@ -1,8 +1,12 @@
+@import "../utils/avoid_collapse.scss";
+
 .sectionhighlight {
   @apply ring-1 ring-gray-900 ring-opacity-10 py-4;
 }
 
 .sectionhighlight_shadow {
-  @apply py-1 px-8 ring-1 ring-gray-900 ring-opacity-10 shadow-xl
+  @include avoidCollapse();
+
+  @apply px-8 ring-1 ring-gray-900 ring-opacity-10 shadow-xl
     sm:px-6;
 }

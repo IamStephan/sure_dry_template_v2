@@ -48,3 +48,16 @@
 .clear {
   clear: both;
 }
+
+/**
+ * These are intended to float without being
+ * responsive
+ */
+
+.right {
+  @apply ml-2 mb-2;
+}
+
+.left {
+  @apply mr-2 mb-2;
+}

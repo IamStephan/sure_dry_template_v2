@@ -1,0 +1,15 @@
+/**
+ * Before after widget
+ * ====================
+ */
+.wt-5333 {
+  .wt-5333-wrapper {
+    .wt-5333-ul {
+      @apply my-0;
+
+      .wt-5333-li {
+        @apply my-0 pl-0;
+      }
+    }
+  }
+}

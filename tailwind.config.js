@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   mode: "jit",
   purge: ["./src/**/*.html", "./src/**/*.svg", "./src/**/*.js"],
@@ -48,5 +50,38 @@ module.exports = {
   plugins: [
     require("@tailwindcss/typography"),
     require("@tailwindcss/aspect-ratio"),
+    plugin(function ({ addBase }) {
+      const essential_base = {
+        ".bg-index": { zIndex: "-1" },
+
+        ".max-w-screen-sm": { maxWidth: "640px" },
+        ".max-w-screen-md": { maxWidth: "768px" },
+        ".max-w-screen-lg": { maxWidth: "1024px" },
+        ".max-w-screen-xl": { maxWidth: "1280px" },
+        ".max-w-screen-2xl": { maxWidth: "1536px" },
+
+        ".min-w-screen-sm": { minWidth: "640px" },
+        ".min-w-screen-md": { minWidth: "768px" },
+        ".min-w-screen-lg": { minWidth: "1024px" },
+        ".min-w-screen-xl": { minWidth: "1280px" },
+        ".min-w-screen-2xl": { minWidth: "1536px" },
+
+        ".w-screen-sm": { width: "640px" },
+        ".w-screen-md": { width: "768px" },
+        ".w-screen-lg": { width: "1024px" },
+        ".w-screen-xl": { width: "1280px" },
+        ".w-screen-2xl": { width: "1536px" },
+
+        ".object-contain-": { objectFit: "contain" },
+        ".object-cover-": { objectFit: "cover" },
+
+        ".object-top-": { objectPosition: "top" },
+        ".object-left-": { objectPosition: "left" },
+        ".object-bottom-": { objectPosition: "bottom" },
+        ".object-right-": { objectPosition: "right" },
+      };
+
+      addBase(essential_base);
+    }),
   ],
 };

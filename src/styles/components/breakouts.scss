@@ -19,14 +19,17 @@
 
   // negate padding to direct media children
   > a,
-  > a img,
   > img,
   > iframe {
     @apply p-0;
 
     // Nagate bottom border radius when there is content below it
-    &:first-child {
+    &:not(:only-child):first-child {
       @apply rounded-b-none;
+
+      & > a:only-child img {
+        @apply rounded;
+      }
     }
   }
 

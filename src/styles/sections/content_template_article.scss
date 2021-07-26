@@ -80,7 +80,6 @@
       }
     }
 
-    // TODO: account for indefinite nested levels
     .content-template-silo-container {
       > ul {
         // Any active link
@@ -114,7 +113,8 @@
               }
 
               // sub category container
-              > ul {
+              // Account for nested links
+              ul {
                 @apply pl-6;
 
                 > li {

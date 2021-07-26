@@ -1,7 +1,7 @@
 // Foundation by ZURB
 // foundation.zurb.com
 // Licensed under MIT Open Source
-
+@use "sass:math";
 @import "./global.scss";
 
 //
@@ -44,7 +44,7 @@ $block-grid-media-queries: true !default;
     @if $align-block-grid-to-grid {
       margin: 0;
     } @else {
-      margin: 0 (-$spacing/2);
+      margin: 0 math.div(-$spacing, 2);
     }
     @include clearfix;
 
@@ -53,7 +53,7 @@ $block-grid-media-queries: true !default;
       float: $default-float;
       height: auto;
       @if $include-spacing {
-        padding: 0 ($spacing/2) $spacing;
+        padding: 0 math.div($spacing, 2) $spacing;
       }
     }
   }
@@ -62,9 +62,9 @@ $block-grid-media-queries: true !default;
     > li {
       list-style: none;
       @if $include-spacing {
-        padding: 0 ($spacing/2) $spacing;
+        padding: 0 math.div($spacing, 2) $spacing;
       }
-      width: 100% / $per-row;
+      width: math.div(100%, $per-row);
 
       &:nth-of-type(1n) {
         clear: none;
@@ -88,9 +88,9 @@ $block-grid-media-queries: true !default;
       }
       &:nth-of-type(#{$per-row}n#{unquote($grid-column)}) {
         padding-left: (
-          $spacing - (($spacing / $per-row) * ($per-row - ($i - 1)))
+          $spacing - (math.div($spacing, $per-row) * ($per-row - ($i - 1)))
         );
-        padding-right: ($spacing - (($spacing / $per-row) * $i));
+        padding-right: ($spacing - (math.div($spacing, $per-row) * $i));
       }
     }
   }

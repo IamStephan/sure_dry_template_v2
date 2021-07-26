@@ -149,9 +149,8 @@
       @apply my-8 clear-both;
     }
 
-    // TODO: fix images always being full width. only needed in some cases
     img {
-      @apply rounded w-full h-auto my-0;
+      @apply rounded my-0;
     }
 
     iframe {

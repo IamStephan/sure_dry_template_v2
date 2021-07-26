@@ -27,6 +27,11 @@
     &:not(:only-child):first-child {
       @apply rounded-b-none;
 
+      // Images can be single children of links
+      img:only-child {
+        @apply rounded-b-none;
+      }
+
       & > a:only-child img {
         @apply rounded;
       }
@@ -53,14 +58,15 @@
 }
 
 /**
- * These are intended to float without being
- * responsive
+ * Some element float but do not contain the
+ * breakout class. Im keeping this for some
+ * elements
  */
 
 .right {
-  @apply ml-2 mb-2;
+  @apply min-sm:ml-2 min-sm:mb-2;
 }
 
 .left {
-  @apply mr-2 mb-2;
+  @apply min-sm:mr-2 min-sm:mb-2;
 }

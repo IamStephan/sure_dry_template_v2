@@ -46,7 +46,7 @@ function InitAccordion() {
   const accordianContainers: NodeListOf<HTMLUListElement> =
     document.querySelectorAll(".accordion");
 
-  accordianContainers.forEach((accordionContainer) => {
+  accordianContainers.forEach((accordionContainer, iCon) => {
     AccordionList.push({
       container: accordionContainer,
       activeElement: null,
@@ -56,6 +56,11 @@ function InitAccordion() {
       accordionContainer.querySelectorAll(".accordion-navigation");
 
     accordionItem.forEach((accordionItem) => {
+      // Account for initially open items
+      if (accordionItem.classList.contains(".active")) {
+        AccordionList[iCon].activeElement = accordionItem;
+      }
+
       accordionItem.onclick = (e) => {
         e.preventDefault();
         ToggleActiveAccordionItem(accordionContainer, accordionItem);

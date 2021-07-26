@@ -14,7 +14,7 @@ function OpenOldPageButton() {
 
   const root = document.querySelector<HTMLHtmlElement>("html");
   const button = document.createElement("button", {});
-  button.innerHTML = "Open old page";
+  button.innerHTML = "Open old page (DEV)";
 
   // Style Button
   button.style.position = "fixed";
@@ -22,12 +22,17 @@ function OpenOldPageButton() {
   button.style.right = "16px";
   button.style.backgroundColor = "#212121";
   button.style.color = "#fafafa";
-  button.style.paddingTop = "5px";
-  button.style.paddingBottom = "5px";
-  button.style.paddingRight = "15px";
-  button.style.paddingLeft = "15px";
+  button.style.paddingTop = "12px";
+  button.style.paddingBottom = "12px";
+  button.style.paddingRight = "20px";
+  button.style.paddingLeft = "20px";
+  button.style.borderRadius = "999px";
+  button.style.fontWeight = "900";
 
-  button.onclick = () => {};
+  button.onclick = () => {
+    const { origin, pathname } = window.location;
+    window.open(origin + pathname);
+  };
 
   root.appendChild(button);
 }

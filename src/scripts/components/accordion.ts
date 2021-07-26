@@ -52,13 +52,14 @@ function InitAccordion() {
       activeElement: null,
     });
 
-    const accordionItem: NodeListOf<HTMLLIElement> =
+    const accordionItems: NodeListOf<HTMLLIElement> =
       accordionContainer.querySelectorAll(".accordion-navigation");
 
-    accordionItem.forEach((accordionItem) => {
+    accordionItems.forEach((accordionItem) => {
       // Account for initially open items
-      if (accordionItem.classList.contains(".active")) {
+      if (accordionItem.classList.contains("active")) {
         AccordionList[iCon].activeElement = accordionItem;
+        console.log("hi");
       }
 
       accordionItem.onclick = (e) => {

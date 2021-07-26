@@ -3,7 +3,7 @@
   document.querySelectorAll(".accordion").forEach((t, o) => {
     e.push({ container: t, activeElement: null }),
       t.querySelectorAll(".accordion-navigation").forEach((n) => {
-        n.classList.contains(".active") && (e[o].activeElement = n),
+        n.classList.contains("active") && (e[o].activeElement = n),
           (n.onclick = (o) => {
             o.preventDefault(),
               (function (t, o) {
@@ -28,7 +28,7 @@
       const e = document.querySelector("#silo-menu-button"),
         t = document.querySelector("#silo-container");
       e.addEventListener("click", () => {
-        t.classList.toggle("show"), console.log("awe");
+        t.classList.toggle("show");
       });
     })(),
     (function () {
@@ -81,18 +81,22 @@
       if ("localhost" === window.location.hostname) return;
       const e = document.querySelector("html"),
         t = document.createElement("button", {});
-      (t.innerHTML = "Open old page"),
+      (t.innerHTML = "Open old page (DEV)"),
         (t.style.position = "fixed"),
         (t.style.bottom = "16px"),
         (t.style.right = "16px"),
         (t.style.backgroundColor = "#212121"),
         (t.style.color = "#fafafa"),
-        (t.style.paddingTop = "5px"),
-        (t.style.paddingBottom = "5px"),
-        (t.style.paddingRight = "15px"),
-        (t.style.paddingLeft = "15px"),
-        (t.onclick = () => {}),
+        (t.style.paddingTop = "12px"),
+        (t.style.paddingBottom = "12px"),
+        (t.style.paddingRight = "20px"),
+        (t.style.paddingLeft = "20px"),
+        (t.style.borderRadius = "999px"),
+        (t.style.fontWeight = "900"),
+        (t.onclick = () => {
+          const { origin: e, pathname: t } = window.location;
+          window.open(e + t);
+        }),
         e.appendChild(t);
     })();
 })();
-//# sourceMappingURL=content_template.5425f7d8.js.map

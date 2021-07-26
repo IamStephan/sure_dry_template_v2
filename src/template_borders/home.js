@@ -11,16 +11,16 @@
       t.classList.toggle("show");
   }),
     o.forEach((e) => {
-      const l = e.querySelector(".dropdown"),
-        n = e.querySelector(".level-2");
-      l.addEventListener("click", function () {
+      const n = e.querySelector(".dropdown"),
+        l = e.querySelector(".level-2");
+      n.addEventListener("click", function () {
         o.forEach((e) => {
           e.querySelector(".level-2").classList.remove("show");
         }),
           t.classList.add("nest"),
-          n.classList.add("show");
+          l.classList.add("show");
       }),
-        n
+        l
           .querySelector(".return-level-1")
           .addEventListener("click", function () {
             t.classList.remove("nest");
@@ -46,17 +46,21 @@
     if ("localhost" === window.location.hostname) return;
     const e = document.querySelector("html"),
       t = document.createElement("button", {});
-    (t.innerHTML = "Open old page"),
+    (t.innerHTML = "Open old page (DEV)"),
       (t.style.position = "fixed"),
       (t.style.bottom = "16px"),
       (t.style.right = "16px"),
       (t.style.backgroundColor = "#212121"),
       (t.style.color = "#fafafa"),
-      (t.style.paddingTop = "5px"),
-      (t.style.paddingBottom = "5px"),
-      (t.style.paddingRight = "15px"),
-      (t.style.paddingLeft = "15px"),
-      (t.onclick = () => {}),
+      (t.style.paddingTop = "12px"),
+      (t.style.paddingBottom = "12px"),
+      (t.style.paddingRight = "20px"),
+      (t.style.paddingLeft = "20px"),
+      (t.style.borderRadius = "999px"),
+      (t.style.fontWeight = "900"),
+      (t.onclick = () => {
+        const { origin: e, pathname: t } = window.location;
+        window.open(e + t);
+      }),
       e.appendChild(t);
   })();
-//# sourceMappingURL=index.34529bbb.js.map

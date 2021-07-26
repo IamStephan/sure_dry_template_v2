@@ -912,12 +912,14 @@ $socialFooter = '
       </section>
     </footer>
 
-    <script src="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/src/template_borders/main.js"></script>
-
     <?php
-    if($pageType == "CONTENT") {
+    if($pageType == "HOME") {
     ?>
-      <script src="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/src/template_borders/silo.js"></script>
+      <script src="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/src/template_borders/home.js"></script>
+    <?php
+      } elseif ($pageType == "CONTENT") {
+    ?>
+      <script src="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/src/template_borders/content.js"></script>
     <?php
       }
     ?>

@@ -59,7 +59,6 @@ function InitAccordion() {
       // Account for initially open items
       if (accordionItem.classList.contains("active")) {
         AccordionList[iCon].activeElement = accordionItem;
-        console.log("hi");
       }
 
       accordionItem.onclick = (e) => {

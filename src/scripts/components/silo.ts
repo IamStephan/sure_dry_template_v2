@@ -7,13 +7,14 @@
  */
 
 function InitMobileSilo(): void {
-  const SiloToggleMenuButton = document.querySelector<HTMLButtonElement>("#silo-menu-button");
-  const SiloContainer = document.querySelector<HTMLDivElement>('#silo-container')
+  const SiloToggleMenuButton =
+    document.querySelector<HTMLButtonElement>("#silo-menu-button");
+  const SiloContainer =
+    document.querySelector<HTMLDivElement>("#silo-container");
 
-  SiloToggleMenuButton.addEventListener('click', () => {
-    SiloContainer.classList.toggle('show')
-    console.log('awe')
-  })
+  SiloToggleMenuButton.addEventListener("click", () => {
+    SiloContainer.classList.toggle("show");
+  });
 }
 
 InitMobileSilo();

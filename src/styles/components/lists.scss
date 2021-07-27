@@ -34,7 +34,7 @@ ol {
 
   li {
     counter-increment: counter;
-    padding-left: theme("padding.8") !important;
+    padding-left: theme("padding.10") !important;
 
     &::before {
       content: counter(counter) !important;

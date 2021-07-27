@@ -27,3 +27,20 @@ ul[class*="-block-grid-"][class*="-block-grid-"][class*="-block-grid-"] {
     }
   }
 }
+
+ol {
+  counter-reset: counter;
+  list-style: none;
+
+  li {
+    counter-increment: counter;
+    padding-left: theme("padding.8") !important;
+
+    &::before {
+      content: counter(counter) !important;
+      color: theme("colors.white") !important;
+      font-weight: theme("fontWeight.bold") !important;
+      @apply inline-flex bg-primary text-sm w-6 h-6 rounded-full justify-center items-center;
+    }
+  }
+}

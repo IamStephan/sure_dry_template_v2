@@ -44,3 +44,9 @@ ol {
     }
   }
 }
+
+// Prevent overflow on floating elements
+ol,
+ul {
+  overflow: hidden;
+}

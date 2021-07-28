@@ -156,5 +156,10 @@
     iframe {
       @apply rounded ring-1 ring-gray-900 ring-opacity-10;
     }
+
+    ul,
+    ol {
+      overflow: auto;
+    }
   }
 }

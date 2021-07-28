@@ -31,5 +31,7 @@
     "sass": "^1.35.2",
     "tailwindcss": "2.1.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "medium-zoom": "^1.0.6"
+  }
 }

@@ -61,7 +61,10 @@ function InitAccordion() {
         AccordionList[iCon].activeElement = accordionItem;
       }
 
-      accordionItem.onclick = (e) => {
+      const accordionItemTitle = accordionItem.querySelector("a");
+
+      // Only toggle on title click
+      accordionItemTitle.onclick = (e) => {
         e.preventDefault();
         ToggleActiveAccordionItem(accordionContainer, accordionItem);
       };

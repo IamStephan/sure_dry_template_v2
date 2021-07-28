@@ -2,13 +2,13 @@
 
 .sectionhighlight {
   @include avoidCollapse();
-  @apply px-8 ring-1 ring-gray-900 ring-opacity-10 py-4
+  @apply px-8 ring-1 ring-gray-900 ring-opacity-10 py-4 my-4 clear-both
     sm:px-6;
 }
 
 .sectionhighlight_shadow {
   @include avoidCollapse();
 
-  @apply px-8 ring-1 ring-gray-900 ring-opacity-10 shadow-xl
+  @apply px-8 ring-1 ring-gray-900 ring-opacity-10 shadow-xl clear-both
     sm:px-6;
 }

@@ -31,6 +31,7 @@ ul[class*="-block-grid-"][class*="-block-grid-"][class*="-block-grid-"] {
 ol {
   counter-reset: counter;
   list-style: none;
+  overflow: auto;
 
   li {
     counter-increment: counter;

@@ -36,7 +36,7 @@
 
   li.paginator_link_current {
     a {
-      @apply bg-primary text-white;
+      @apply bg-primary text-white hover:bg-opacity-90 active:bg-opacity-80;
     }
   }
 

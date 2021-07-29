@@ -17,6 +17,7 @@ module.exports = {
       lg: { max: "1023px" },
       md: { max: "767px" },
       sm: { max: "639px" },
+      xs: { max: "319px" },
 
       "min-3xl": { min: "1919px" },
       "min-2xl": { min: "1535px" },
@@ -24,6 +25,7 @@ module.exports = {
       "min-lg": { min: "1023px" },
       "min-md": { min: "767px" },
       "min-sm": { min: "639px" },
+      "min-xs": { min: "319px" },
     },
     extend: {
       colors: {

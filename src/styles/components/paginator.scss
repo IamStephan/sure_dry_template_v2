@@ -1,5 +1,5 @@
 .paginator.paginator.paginator ul {
-  @apply inline-flex;
+  @apply inline-flex flex-wrap;
 
   li {
     @apply pl-0;

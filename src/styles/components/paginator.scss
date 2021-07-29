@@ -13,7 +13,8 @@
     }
   }
 
-  .paginator_link {
+  .paginator_link,
+  .paginator_link_previous {
     &:first-of-type {
       a {
         @apply rounded-l-md;

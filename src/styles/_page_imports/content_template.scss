@@ -21,8 +21,9 @@
 @import "../components/center_item.scss";
 @import "../components/breakouts.scss";
 @import "../components/accordion.scss";
-@import "../components/legacy_grids/grid.scss";
-@import "../components/legacy_grids/block-grid.scss";
+@import "../components/legacy/grid.scss";
+@import "../components/legacy/block-grid.scss";
+@import "../components/legacy/flex_video.scss";
 @import "../components/inline_beforeafter_wide.scss";
 @import "../components/misc.scss";
 @import "../components/section_highlight.scss";
@@ -33,7 +34,6 @@
 @import "../components/carousel.scss";
 @import "../components/lightbox.scss";
 @import "../components/tables.scss";
-@import "../components/video.scss";
 @import "../components/paginator.scss";
 @import "../components/related_page_selector.scss";
 
@@ -43,3 +43,5 @@
 */
 @import "../macros/photo_gallary.scss";
 @import "../macros/case_studies.scss";
+
+@import "../macros/about_us.scss";

@@ -23,6 +23,10 @@
       }
     }
     .case_study_item_details {
+      &:only-child {
+        @apply col-span-2;
+      }
+
       .case_study_title {
         a {
           @apply font-semibold no-underline text-xl line-clamp-1 mb-2;

@@ -36,3 +36,19 @@
       md:hidden;
   }
 }
+
+/**
+ * This is the first div block containing the
+ * image
+ */
+.row.about-section.bg-lt-blue {
+  @apply overflow-hidden rounded-md;
+
+  div:first-child {
+    @apply -mx-8 mb-6 #{!important};
+
+    img {
+      @apply w-full h-auto;
+    }
+  }
+}

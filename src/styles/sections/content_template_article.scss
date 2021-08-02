@@ -2,7 +2,7 @@
   @apply mx-auto max-w-screen-xl gap-y-6 gap-x-6 px-8
     md:px-4;
   display: grid;
-  grid-template-columns: 250px auto;
+  grid-template-columns: 275px auto;
 
   grid-template-rows: auto auto;
 
@@ -11,7 +11,7 @@
   }
 
   .content-template-breadcrumbs {
-    @apply col-start-2 col-end-3 row-start-1 row-end-2 bg-gray-50 px-4 py-2 text-sm rounded-md font-semibold text-gray-900
+    @apply col-start-1 col-end-3 row-start-1 row-end-2 bg-gray-50 px-4 py-2 text-sm rounded-md font-semibold text-gray-900
       lg:col-start-1 lg:col-end-2 lg:row-start-2 lg:row-end-3;
 
     // From the generated token
@@ -34,19 +34,20 @@
 
   .content-template-silo {
     @screen min-lg {
-      @apply col-start-1 col-end-2 row-start-1 row-end-3;
+      @apply col-start-1 col-end-2 row-start-2 row-end-3;
 
       .content-template-silo-menu {
         @apply hidden;
       }
 
       .content-template-silo-container {
-        @apply sticky top-4;
+        @apply sticky top-4 bg-gray-50 px-4 py-3 rounded-md ring-1 ring-gray-900 ring-opacity-10;
       }
     }
 
     @screen lg {
-      @apply col-start-1 col-end-2 row-start-1 row-end-2 relative;
+      @apply col-start-1 col-end-2 row-start-1 row-end-2 relative z-50;
+
       .content-template-silo-menu {
         @apply flex justify-center sm:justify-start;
 
@@ -73,7 +74,7 @@
     }
 
     .content-template-image-container {
-      @apply mb-4;
+      @apply mb-4 hidden;
 
       img {
         @apply w-20 h-20 bg-red-400 rounded-full;

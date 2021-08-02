@@ -73,14 +73,6 @@
       }
     }
 
-    .content-template-image-container {
-      @apply mb-4 hidden;
-
-      img {
-        @apply w-20 h-20 bg-red-400 rounded-full;
-      }
-    }
-
     .content-template-silo-container {
       > ul {
         // Any active link

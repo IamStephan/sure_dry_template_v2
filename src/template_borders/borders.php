@@ -40,52 +40,6 @@ $socialFooter = '
     }
 ?>
 
-<?php
-    // Silo component images
-    $siloComponentImage = "https://www.suredrybasements.com/core/images/templates/bambam/nav-service-icons/nav-icon-concrete-red.png";
-
-    switch(true) {
-      case stristr($thePage,"about-us"):
-        break;
-
-      case stristr($thePage,"basement-waterproofing"):
-        break;
-
-      case stristr($thePage,"commercial-foundation-repair"):
-        break;
-
-      case stristr($thePage,"foundation-repair"):
-        break;
-
-      case stristr($thePage,"concrete-lifting"):
-        break;
-
-      case stristr($thePage,"crawl-space-repair"):
-        break;
-
-      case stristr($thePage,"insulation"):
-        break;
-
-      case stristr($thePage,"sump-pump"):
-        break;
-
-      case stristr($thePage,"radon-gas-mitigation"):
-        break;
-
-      case stristr($thePage,"flood-vents"):
-        break;
-
-      case stristr($thePage,"service-area"):
-        break;
-
-      default:
-        $siloComponentImage = "https://www.suredrybasements.com/core/images/templates/bambam/nav-service-icons/nav-icon-concrete-red.png";
-        break;
-    }
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -737,12 +691,6 @@ $socialFooter = '
           </button>
         </div>
         <div class="content-template-silo-container" id="silo-container">
-          <div class="content-template-image-container">
-            <img
-              src="https://www.suredrybasements.com/core/images/templates/bambam/nav-service-icons/nav-icon-waterproof-red.png"
-            />
-          </div>
-          
           [[single_silo_nav]]
         </div>
       </aside>

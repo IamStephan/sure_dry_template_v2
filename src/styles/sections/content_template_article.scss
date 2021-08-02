@@ -32,6 +32,7 @@
     }
   }
 
+  //? Maybe remove the ring around the silo
   .content-template-silo {
     @screen min-lg {
       @apply col-start-1 col-end-2 row-start-2 row-end-3;

@@ -3,6 +3,11 @@
  * ==========
  * This is exactly like an accordion but its using
  * different class names and I don't know why
+ *
+ * NOTE:
+ * ======
+ * There seems to be conflict with this script and the one internally
+ * used by the system
  */
 
 interface IQA {
@@ -63,8 +68,7 @@ function InitQA() {
       const QATitle = QAItem.querySelector<HTMLDivElement>(".qa-header");
 
       // Only toggle on title click
-      QATitle.onclick = (e) => {
-        e.preventDefault();
+      QATitle.onclick = (_e) => {
         ToggleActiveQAItem(QAContainer, QAItem);
       };
     });

@@ -17,82 +17,84 @@
     }
   }
 
+  // Then what is the point of this class
   .blog_list {
-    .blog_items {
-      @apply flex flex-col mb-4;
+  }
 
-      .blog_item {
-        @apply grid gap-6 items-center grid-cols-[250px,1fr] border-gray-900 border-b border-opacity-10 p-4
-          sm:grid-cols-1;
+  .blog_items {
+    @apply flex flex-col mb-4;
 
-        &.blog_most_recent {
-          .blog_most_recent_header {
-            @apply block #{!important};
-            @apply col-span-2 bg-gray-900 py-4 px-4 text-white text-2xl font-bold rounded-t-md
-              sm:col-span-1;
-          }
+    .blog_item {
+      @apply grid gap-6 items-center grid-cols-[250px,1fr] border-gray-900 border-b border-opacity-10 p-4
+        sm:grid-cols-1;
 
-          .blog_thumbnail {
-            @apply row-start-2;
-          }
-
-          .blog_item_details {
-            @apply row-start-2
-              sm:row-start-3;
-          }
-        }
-
-        &:nth-child(2n) {
-          @apply bg-gray-50;
+      &.blog_most_recent {
+        .blog_most_recent_header {
+          @apply block #{!important};
+          @apply col-span-2 bg-gray-900 py-4 px-4 text-white text-2xl font-bold rounded-t-md
+            sm:col-span-1;
         }
 
         .blog_thumbnail {
-          a {
-            @apply block aspect-h-3 aspect-w-4
-              sm:aspect-h-9 sm:aspect-w-16;
-
-            img {
-              @apply object-cover
-                sm:object-none;
-            }
-          }
+          @apply row-start-2;
         }
 
         .blog_item_details {
-          .blog_title {
-            a {
-              @apply font-semibold no-underline text-xl line-clamp-1 mb-2;
-            }
-          }
+          @apply row-start-2
+            sm:row-start-3;
+        }
+      }
 
-          .blog_preview {
-            p {
-              @apply line-clamp-2 mb-1;
-            }
-          }
+      &:nth-child(2n) {
+        @apply bg-gray-50;
+      }
 
-          .blog_date {
-            p {
-              @apply text-sm font-bold;
-            }
-          }
+      .blog_thumbnail {
+        a {
+          @apply block aspect-h-3 aspect-w-4
+            sm:aspect-h-9 sm:aspect-w-16;
 
-          .blog_link {
-            a {
-              @apply text-sm text-primary;
-            }
+          img {
+            @apply object-cover
+              sm:object-none;
+          }
+        }
+      }
+
+      .blog_item_details {
+        .blog_title {
+          a {
+            @apply font-semibold no-underline text-xl line-clamp-1 mb-2;
+          }
+        }
+
+        .blog_preview {
+          p {
+            @apply line-clamp-2 mb-1;
+          }
+        }
+
+        .blog_date {
+          p {
+            @apply text-sm font-bold;
+          }
+        }
+
+        .blog_link {
+          a {
+            @apply text-sm text-primary;
           }
         }
       }
     }
-    .blog_rss {
-      @apply float-right;
-    }
+  }
+  .blog_rss {
+    @apply float-right;
+  }
 
-    .blog_summary {
-      .blog_total {
-        @apply font-bold;
-      }
+  .blog_summary {
+    .blog_total {
+      @apply font-bold;
     }
   }
 }

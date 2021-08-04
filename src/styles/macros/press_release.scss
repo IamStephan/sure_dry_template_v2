@@ -49,8 +49,8 @@
 // Im using it know but this should change
 .module {
   .pr_contact_box {
-    @apply float-right ring-1 ring-gray-900 ring-opacity-10 rounded-md overflow-hidden ml-4 mb-4
-      sm:float-none sm:ml-0;
+    @apply float-right ring-1 ring-gray-900 ring-opacity-10 rounded-md overflow-hidden ml-4 mb-4 w-80
+      sm:float-none sm:ml-0 sm:w-full;
 
     // The title
     > h2 {
@@ -71,8 +71,8 @@
     .social-share-inline {
       ul {
         @include resetListStyles();
-        @apply flex my-0
-          sm:space-x-2;
+        @apply flex my-0 mt-4
+          sm:space-x-4;
       }
     }
   }

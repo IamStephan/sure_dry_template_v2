@@ -3,6 +3,9 @@ import "../components/silo";
 import "../components/supernav";
 import "../components/lightbox";
 
+// Macros
+import "../macros/questions_answers";
+
 // THIS IS ONLY FOR THE TEST ENV
 import "../utils/keepInTestEnv";
 import "../utils/openOldPageButton";

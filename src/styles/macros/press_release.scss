@@ -1,3 +1,5 @@
+@import "../utils/reset_list_styles.scss";
+
 .press_release_index {
   .pr_items {
     @apply mb-4;
@@ -40,5 +42,47 @@
     .pr_total {
       @apply font-bold;
     }
+  }
+}
+
+// press release item pages do not have a wrapper class name except for module
+// Im using it know but this should change
+.module {
+  .pr_contact_box {
+    @apply float-right ring-1 ring-gray-900 ring-opacity-10 rounded-md overflow-hidden ml-4 mb-4
+      sm:float-none sm:ml-0;
+
+    // The title
+    > h2 {
+      @apply my-0 py-2 px-4 bg-gray-100 border-b border-gray-900 border-opacity-10;
+    }
+
+    .pr_contact_info {
+      @apply px-4 py-2;
+      a {
+        @apply text-primary text-sm;
+      }
+
+      p {
+        @apply my-0;
+      }
+    }
+
+    .social-share-inline {
+      ul {
+        @include resetListStyles();
+        @apply flex my-0
+          sm:space-x-2;
+      }
+    }
+  }
+
+  .pr_location_date {
+    @apply font-bold;
+  }
+
+  // Leave the content styling to prose
+  // There is video elements in some of the posts and they have unrelaiable classes with a fixed width
+  .pr_content {
   }
 }

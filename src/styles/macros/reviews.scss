@@ -40,6 +40,7 @@ $star-color: #ffbd2a;
 }
 
 // TODO: Redo the entire thing! (Bad markup and general lack of consistency is causing me to fight with the styles)
+// TODO: Fix the icon positions for social sharing (There seems to a difference in dev and prod)
 .reviews_index {
   .review-btn {
     @apply flex justify-center;

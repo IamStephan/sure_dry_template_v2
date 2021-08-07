@@ -10,7 +10,8 @@
     "parcel:build": "parcel build src/html/pages/*.html",
     "clean": "rm -rf dist .parcel-cache",
     "build": "npm-run-all -s clean parcel:build",
-    "start": "npm-run-all -s clean -p parcel:serve"
+    "start": "npm-run-all -s clean -p parcel:serve",
+    "parcel": "parcel"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.3",
@@ -22,6 +23,7 @@
     "cssnano": "^5.0.5",
     "npm-run-all": "^4.1.5",
     "parcel": "^2.0.0-beta.2",
+    "parcel-reporter-bundle-manifest": "^0.3.3",
     "postcss": "^8.3.0",
     "postcss-cli": "^8.3.1",
     "posthtml-beautify": "^0.7.0",

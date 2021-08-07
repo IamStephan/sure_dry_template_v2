@@ -59,6 +59,10 @@ _or_
 
 ## Getting distributable files
 
+**[NOTE]**
+
+> The borders file needs to build manually
+
 To retrieve the compiled html and minified CSS and Javascript:
 
 ```bash

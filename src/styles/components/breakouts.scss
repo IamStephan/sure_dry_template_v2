@@ -82,7 +82,7 @@
 
 .left {
   @include avoidCollapse();
-  @apply min-sm:mr-4 min-sm:mb-4 clear-left;
+  @apply min-sm:mr-4 min-sm:mb-4;
 
   @screen sm {
     max-width: auto !important;

@@ -4944,6 +4944,11 @@ pako@~1.0.5:
   resolved "https://registry.yarnpkg.com/pako/-/pako-1.0.11.tgz#6c9599d340d54dfd3946380252a35705a6b992bf"
   integrity sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==
 
+parcel-reporter-bundle-manifest@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/parcel-reporter-bundle-manifest/-/parcel-reporter-bundle-manifest-0.3.3.tgz#02b5f084bae098ce0d8e8e018282c4a2232b9c01"
+  integrity sha512-0+rGMvA9QvAp+XW1oOAzP8AWEglu60fdThxT2TValEY+DcZoXA4u2nnDmOUVaRb58h8cW8A0NTGMDYyKXexuGg==
+
 parcel@^2.0.0-beta.2:
   version "2.0.0-beta.2"
   resolved "https://registry.yarnpkg.com/parcel/-/parcel-2.0.0-beta.2.tgz#0a58f0b810fe2199b35d7bf7a949906568222d75"

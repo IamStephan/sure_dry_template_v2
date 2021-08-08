@@ -36,7 +36,12 @@
       }
 
       .block-list-container {
-        @apply grid grid-cols-2 gap-x-7;
+        columns: 2;
+
+        // I really don't like this (It's making exceptions to rules already set out)
+        @media (max-width: 400px) {
+          columns: 1;
+        }
 
         .block-list {
           @apply first:mr-4;

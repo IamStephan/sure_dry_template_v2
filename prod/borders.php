@@ -46,6 +46,7 @@
    * Function declarations
    * ======================
    */
+  // Checks for substring matches in an array
   function substr_in_array($haystack, $needle) {
     for($i = 0; $i < count($haystack); $i++) {
       $string_pos = strpos($needle, $haystack[$i]);
@@ -69,8 +70,8 @@
     $pageType = 'HOME';
   } else if(($thePage != "index") && ($thePage != "free-estimate") && ($thePage != "free-estimate/confirmation")) {
     $pageType = 'CONTENT';
-    // Get macro type
   } else {
+    // TODO: create free estimate styles
     $pageType = 'CONTENT';
   }
 
@@ -110,10 +111,12 @@
   $stylesToLoad = "";
   $scriptsToLoad = "";
 
+  // TODO: ratther use array based on urls
   if($pageType == "HOME") {
     $stylesToLoad .= '<link rel="stylesheet" type="text/css" href="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/homepage.css">';
     $scriptsToLoad .= '<script src="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/home.js"></script>';
   } elseif ($pageType == "CONTENT") {
+    // TODO: inject proper macro styles
     $stylesToLoad .= '<link rel="stylesheet" type="text/css" href="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/content.css">';
     $scriptsToLoad .= '<script src="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/content.js"></script>';
   }
@@ -190,7 +193,7 @@
     <? endif; ?>
   </head>
 
-  <body id="app">
+  <body>
     <!--
       Navigation bar
       ==============

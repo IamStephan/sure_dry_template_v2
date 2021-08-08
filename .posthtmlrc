@@ -2,7 +2,11 @@
   "plugins": {
     "posthtml-include": { "root": "src/html" },
     "posthtml-inline-svg": {},
-    "posthtml-expressions": {},
+    "posthtml-expressions": {
+      "locals": {
+        "showSilo": false
+      }
+    },
     "posthtml-beautify": {}
   }
 }

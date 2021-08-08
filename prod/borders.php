@@ -1,17 +1,4 @@
-
-
 <?php
-  function substr_in_array($haystack, $needle) {
-    for($i = 0; $i < count($haystack); $i++) {
-      $string_pos = strpos($needle, $haystack[$i]);
-
-      if ($string_pos !== false) {
-        return true;
-      }
-    }
-
-    return false;
-  }
   /**
    * NOTE:
    * ======
@@ -54,6 +41,22 @@
     "about-us",
     "testimonials"
   );
+
+  /**
+   * Function declarations
+   * ======================
+   */
+  function substr_in_array($haystack, $needle) {
+    for($i = 0; $i < count($haystack); $i++) {
+      $string_pos = strpos($needle, $haystack[$i]);
+
+      if ($string_pos !== false) {
+        return true;
+      }
+    }
+
+    return false;
+  }
 
   /**
    * Determine page type (and macro)
@@ -148,9 +151,9 @@
     )
   );
 
-  // $bottomNav = new nav();
-  // $bottomNav->superTemplateId = 21;
-  // $bottomNav->superMode = 'bottom';
+  $bottomNav = new nav();
+  $bottomNav->superTemplateId = 21;
+  $bottomNav->superMode = 'bottom';
 ?>
 
 <!DOCTYPE html>
@@ -836,101 +839,8 @@
           <p class="cta-number">1-800-379-3788</p>
         </div>
 
-        <div class="block">
-          <h4 class="block-title">Our Services</h4>
-          <div class="block-list-container">
-            <ul class="block-list">
-              <li>
-                <a class="block-list-item">Basement Waterproofing</a>
-              </li>
-              <li>
-                <a class="block-list-item">Foundation Repair</a>
-              </li>
-              <li>
-                <a class="block-list-item">Concrete Leveling</a>
-              </li>
-            </ul>
-            <ul class="block-list">
-              <li>
-                <a class="block-list-item">Crawl Spaces</a>
-              </li>
-              <li>
-                <a class="block-list-item">Insulation</a>
-              </li>
-              <li>
-                <a class="block-list-item">Refer a Friend</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="block">
-          <h4 class="block-title">Our Work</h4>
-          <div class="block-list-container">
-            <ul class="block-list">
-              <li>
-                <a class="block-list-item">Case Studies</a>
-              </li>
-              <li>
-                <a class="block-list-item">Testimonials</a>
-              </li>
-              <li>
-                <a class="block-list-item">Customer Reviews</a>
-              </li>
-              <li>
-                <a class="block-list-item">Videos</a>
-              </li>
-            </ul>
-            <ul class="block-list">
-              <li>
-                <a class="block-list-item">Photo Galary</a>
-              </li>
-              <li>
-                <a class="block-list-item">Before & After</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="block">
-          <h4 class="block-title">Our Company</h4>
-          <div class="block-list-container">
-            <ul class="block-list">
-              <li>
-                <a class="block-list-item">About Us</a>
-              </li>
-              <li>
-                <a class="block-list-item">Q&A</a>
-              </li>
-              <li>
-                <a class="block-list-item">Affiliations</a>
-              </li>
-              <li>
-                <a class="block-list-item">Careers</a>
-              </li>
-              <li>
-                <a class="block-list-item">Blog</a>
-              </li>
-            </ul>
-            <ul class="block-list">
-              <li>
-                <a class="block-list-item">Financing</a>
-              </li>
-              <li>
-                <a class="block-list-item">Meet The Team</a>
-              </li>
-              <li>
-                <a class="block-list-item">Press Release</a>
-              </li>
-              <li>
-                <a class="block-list-item">Privacy Policy</a>
-              </li>
-              <li>
-                <a class="block-list-item">Sitemap</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+        <!-- Bottom Nav -->
+        <?= $bottomNav->generateSuperMarkup(); ?>
       </section>
 
       <!-- Bottom Banner -->

@@ -1,10 +1,22 @@
+
+
 <?php
+  function substr_in_array($haystack, $needle) {
+    for($i = 0; $i < count($haystack); $i++) {
+      $string_pos = strpos($needle, $haystack[$i]);
+
+      if ($string_pos !== false) {
+        return true;
+      }
+    }
+
+    return false;
+  }
   /**
    * NOTE:
    * ======
    * Could all of this be placed in the `before borders`?
    */
-
   global $thePage, $cmsPageData;
 
   // TODO: make use of this to determine file sources
@@ -12,10 +24,10 @@
 
   // List of pages that contain no silo
   $noSilo = array (
-    "index",
+    "insulation",
+    "refer",
     "service-area",
     "free-estimate",
-    "partner-with-us"
   );
 
   // List of all the macros
@@ -75,7 +87,7 @@
    * - Should render service areas
    */
   $showSilo = true;
-  if((in_array($thePage, $noSilo)) || $isCityPage) {
+  if(substr_in_array($noSilo, $thePage) || $isCityPage) {
     $showSilo = false;
   }
   
@@ -95,11 +107,11 @@
   $scriptsToLoad = "";
 
   if($pageType == "HOME") {
-    $stylesToLoad .= '<link rel="stylesheet" type="text/css" href="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/src/template_borders/homepage.css">';
-    $scriptsToLoad .= '<script src="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/src/template_borders/home.js"></script>';
+    $stylesToLoad .= '<link rel="stylesheet" type="text/css" href="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/homepage.css">';
+    $scriptsToLoad .= '<script src="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/home.js"></script>';
   } elseif ($pageType == "CONTENT") {
-    $stylesToLoad .= '<link rel="stylesheet" type="text/css" href="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/src/template_borders/content.css">';
-    $scriptsToLoad .= '<script src="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/src/template_borders/content.js"></script>';
+    $stylesToLoad .= '<link rel="stylesheet" type="text/css" href="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/content.css">';
+    $scriptsToLoad .= '<script src="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/content.js"></script>';
   }
 
   /**
@@ -163,10 +175,15 @@
       content="Sure Dry Basement Systems is the Basement Systems dealer in Wausau, Marshfield, Oshkosh, Appleton, Green Bay, Rhinelander, and Ashland areas." />
 
     <!-- Styles (Global)-->
-    <link rel="stylesheet" type="text/css" href="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/src/template_borders/template.css">
+    <link rel="stylesheet" type="text/css" href="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/template.css">
 
     <!-- Selected styles -->
     <?= $stylesToLoad; ?>
+
+    <!-- City Page core styles -->
+    <? if($isCityPage): ?>
+    [[custom_core_v3_9]]
+    <? endif; ?>
   </head>
 
   <body id="app">
@@ -932,6 +949,11 @@
 
     <!-- Selected scripts -->
     <?= $scriptsToLoad; ?>
+
+    <!-- City Page core scripts -->
+    <? if($isCityPage): ?>
+    [[custom_core_v3_9_js]]
+    <? endif; ?>
   </body>
 
 </html>

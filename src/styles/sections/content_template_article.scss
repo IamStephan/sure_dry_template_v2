@@ -1,13 +1,30 @@
+$silo-width: 275;
+
 .content-template-article {
   @apply mx-auto max-w-screen-xl gap-y-6 gap-x-6 px-8
     md:px-4;
   display: grid;
-  grid-template-columns: 275px auto;
+  grid-template-columns: #{$silo-width}px auto;
 
   grid-template-rows: auto auto;
 
   @screen lg {
     grid-template-columns: 1fr;
+  }
+
+  // When content needs to rendered without a silo
+  &.no-silo {
+    @apply grid-cols-1;
+
+    .content-template-breadcrumbs {
+      @apply col-start-1 col-end-2 row-start-1 row-end-2
+        lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-2;
+    }
+
+    .content-template-main {
+      @apply max-w-5xl mx-auto col-start-1 col-end-2
+        lg:row-start-2 lg:row-end-2;
+    }
   }
 
   .content-template-breadcrumbs {

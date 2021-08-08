@@ -26,6 +26,7 @@
   $noSilo = array (
     "insulation",
     "refer",
+    "opinion",
     "service-area",
     "free-estimate",
   );
@@ -67,7 +68,7 @@
     $pageType = 'CONTENT';
     // Get macro type
   } else {
-    $pageType = 'UNKNOW';
+    $pageType = 'CONTENT';
   }
 
   /**

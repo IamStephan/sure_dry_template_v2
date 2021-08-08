@@ -3,5 +3,6 @@ node_modules
 .cache
 .parcel-cache
 dist
+lib
 links_for_dev
 cmsDataDummy.json

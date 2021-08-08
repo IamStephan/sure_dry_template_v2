@@ -7,6 +7,9 @@
 
   global $thePage, $cmsPageData;
 
+  // TODO: make use of this to determine file sources
+  $isDevelopmentMode = true;
+
   // List of pages that contain no silo
   $noSilo = array (
     "index",

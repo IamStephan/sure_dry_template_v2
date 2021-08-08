@@ -12,7 +12,7 @@ function InitMobileSilo(): void {
   const SiloContainer =
     document.querySelector<HTMLDivElement>("#silo-container");
 
-  SiloToggleMenuButton.addEventListener("click", () => {
+  SiloToggleMenuButton?.addEventListener("click", () => {
     SiloContainer.classList.toggle("show");
   });
 }

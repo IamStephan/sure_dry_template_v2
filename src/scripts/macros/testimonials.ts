@@ -7,7 +7,7 @@ function InitContentSelector(): void {
   const videoContent = document.querySelector<HTMLDivElement>("#tabs-video");
 
   if (selector) {
-    selector.addEventListener("change", (_e) => {
+    selector?.addEventListener("change", (_e) => {
       if (selector.value === "video") {
         writtenContent.classList.add("hide");
         videoContent.classList.remove("hide");

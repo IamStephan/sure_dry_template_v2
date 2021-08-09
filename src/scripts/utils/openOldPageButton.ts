@@ -28,6 +28,7 @@ function OpenOldPageButton() {
   button.style.paddingLeft = "20px";
   button.style.borderRadius = "999px";
   button.style.fontWeight = "900";
+  button.style.zIndex = "9999999";
 
   button.onclick = () => {
     const { origin, pathname } = window.location;

@@ -14,6 +14,7 @@
     "insulation",
     "refer",
     "opinion",
+    "sitemap",
     "service-area",
     "free-estimate",
     "privacy-policy"

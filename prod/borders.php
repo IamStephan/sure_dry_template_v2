@@ -16,6 +16,7 @@
     "opinion",
     "service-area",
     "free-estimate",
+    "privacy-policy"
   );
 
   // List of all the macros

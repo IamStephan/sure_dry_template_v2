@@ -3,6 +3,8 @@
    * NOTE:
    * ======
    * Could all of this be placed in the `before borders`?
+   * 
+   * The $isCityPage variable does not work
    */
   global $thePage, $cmsPageData;
 
@@ -73,8 +75,18 @@
     $pageType = 'HOME';
   } else if(($thePage != "index") && ($thePage != "free-estimate") && ($thePage != "free-estimate/confirmation")) {
     $pageType = 'CONTENT';
-  } else {
+  } else if(($thePage == "free-estimate") || ($thePage == "free-estimate/confirmation")) {
     // TODO: create free estimate styles
+    // $pageType = 'ESTIMATE';
+    $pageType = 'CONTENT';
+  } else {
+    /**
+     * When the page type is unknown it could be that
+     * the logic is not picking it up properly. But it
+     * is highly likely that its a content page of some
+     * sort. So load in the content styles and the page should
+     * work half decently.
+     */
     $pageType = 'CONTENT';
   }
 

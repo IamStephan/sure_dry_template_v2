@@ -10,7 +10,8 @@ function InitRelatedSelector(): void {
      * or the default value ('Please select topic')
      */
     if (selector.value !== "0") {
-      window.location.href = selector.value;
+      // Keep in the dev env
+      window.location.href = selector.value + "?cache=0&dev_template=1&test=1";
     }
   });
 }

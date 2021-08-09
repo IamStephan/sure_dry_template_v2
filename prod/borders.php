@@ -271,18 +271,18 @@
           <h1 class="heading-main-text">
             Your Home.<br />
             Our Team.<br />
-            <span class="font-black">One Solution.</span>
+            <span class="heading-main-text-highlight">One Solution.</span>
           </h1>
         </div>
 
         <div class="heading-sub-text-container">
-          <div class="mb-16 md:mb-6">
+          <div class="heading-sub-text-container-wrapper">
             <p class="heading-sub-text">
-              Foundation Repair <span class="font-bold">•</span> Basement
+              Foundation Repair <span class="heading-sub-text-highlight">•</span> Basement
               Waterproofing
             </p>
             <p class="heading-sub-text">
-              Crawl Space Repair <span class="font-bold">•</span> Concrete
+              Crawl Space Repair <span class="heading-sub-text-highlight">•</span> Concrete
               Leveling
             </p>
           </div>

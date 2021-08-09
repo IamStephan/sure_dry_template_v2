@@ -64,6 +64,10 @@
       @apply mb-4 font-semibold leading-snug text-white text-7xl
         lg:text-3xl
         md:text-center md:text-2xl md:mb-0;
+
+      .heading-main-text-highlight {
+        @apply font-black;
+      }
     }
   }
 
@@ -71,10 +75,18 @@
     @apply col-start-2 col-end-3 row-start-2 row-end-3 pb-32
       md:row-start-3 md:row-end-4 md:pb-8;
 
-    .heading-sub-text {
-      @apply text-2xl font-medium text-white
-        lg:text-base
-        md:text-center md:text-xs;
+    .heading-sub-text-container-wrapper {
+      @apply mb-10 md:mb-6;
+
+      .heading-sub-text {
+        @apply text-2xl font-medium text-white
+          lg:text-base
+          md:text-center md:text-xs;
+
+        .heading-sub-text-highlight {
+          @apply font-bold;
+        }
+      }
     }
 
     .button-container {

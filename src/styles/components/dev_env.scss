@@ -1,11 +1,6 @@
+/**
+ * Conflicts with the dev script
+ */
 .alert-box.warning {
-  @apply z-[999] sticky top-0 bg-yellow-700 px-8 py-6 text-white;
-
-  * {
-    @apply text-white;
-  }
-
-  a {
-    @apply underline;
-  }
+  @apply hidden;
 }

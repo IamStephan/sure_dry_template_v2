@@ -16,8 +16,9 @@
     "opinion",
     "sitemap",
     "service-area",
-    "free-estimate",
-    "privacy-policy"
+    "privacy-policy",
+    // This should be removed since its a page type
+    "free-estimate"
   );
 
   // List of all the macros

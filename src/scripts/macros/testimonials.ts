@@ -6,19 +6,17 @@ function InitContentSelector(): void {
     document.querySelector<HTMLDivElement>("#tabs-written");
   const videoContent = document.querySelector<HTMLDivElement>("#tabs-video");
 
-  if (selector) {
-    selector?.addEventListener("change", (_e) => {
-      if (selector.value === "video") {
-        writtenContent.classList.add("hide");
-        videoContent.classList.remove("hide");
-      }
+  selector?.addEventListener("change", (_e) => {
+    if (selector.value === "video") {
+      writtenContent?.classList.add("hide");
+      videoContent?.classList.remove("hide");
+    }
 
-      if (selector.value === "written") {
-        writtenContent.classList.remove("hide");
-        videoContent.classList.add("hide");
-      }
-    });
-  }
+    if (selector.value === "written") {
+      writtenContent?.classList.remove("hide");
+      videoContent?.classList.add("hide");
+    }
+  });
 }
 
 InitContentSelector();

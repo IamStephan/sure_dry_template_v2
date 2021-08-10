@@ -150,6 +150,11 @@
     // TODO: inject proper macro styles
     $topInject .= '<link rel="stylesheet" type="text/css" href="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/content.css">';
     $bottomInject .= '<script src="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/content.js"></script>';
+
+    if(strpos($thePage, 'free-estimate') !== false) {
+      // Inject jquery
+      $topInject .= '<script type="text/javascript" src="https://cdn.treehouseinternetgroup.com/cms_core/assets/js/jquery.min.js"></script>';
+    }
   }
 
   // Inject some styles and scripts into document

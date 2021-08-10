@@ -48,6 +48,15 @@
   );
 
   /**
+   * ==================================================
+   *                  REMOVE THIS
+   * ==================================================
+   */
+  // Temp work around for the city pages
+  // This assumes that the city page is inside the services area and checking to see if the url is nested
+  $isCityPage = (strpos($thePage, 'service-area') !== false) && (strpos($thePage, '/') !== false);
+
+  /**
    * Function declarations
    * ======================
    */
@@ -112,10 +121,6 @@
   }
   
   $showServiceAreas = true;
-
-  // Temp work around for the city pages
-  // This assumes that the city page is inside the services area and checking to see if the url is nested
-  $isCityPage = (strpos($thePage, 'service-area') !== false) && (strpos($thePage, '/') !== false);
 
   /**
    * Selective styles & scripts

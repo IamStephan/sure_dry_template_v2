@@ -12,6 +12,13 @@ $silo-width: 275;
     grid-template-columns: 1fr;
   }
 
+  // When content needs to rendered without breadcrumbs
+  &.no-breadcrumbs {
+    .content-template-main {
+      @apply col-start-1 col-end-2;
+    }
+  }
+
   // When content needs to rendered without a silo
   &.no-silo {
     @apply grid-cols-1;
@@ -23,7 +30,19 @@ $silo-width: 275;
 
     .content-template-main {
       @apply max-w-5xl mx-auto col-start-1 col-end-2
-        lg:row-start-2 lg:row-end-2;
+        lg:row-start-2 lg:row-end-3;
+    }
+  }
+
+  // When both the breadcrumbs and silo are disabled move the content to the fist row
+  // The gap provided by the empty row seems to space the elements nicely from the navbar
+  // But its probably better to explicityly define what's happening by having specific styles
+  &.no-breadcrumbs.no-silo {
+    // Override default section gap
+    @apply my-12
+      lg:my-12 md:my-8;
+    .content-template-main {
+      @apply row-start-1 row-end-2;
     }
   }
 

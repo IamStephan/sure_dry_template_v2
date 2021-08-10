@@ -19,7 +19,6 @@
     "sitemap",
     "service-area",
     "privacy-policy",
-    // This should be removed since its a page type
     "free-estimate"
   );
 
@@ -44,7 +43,8 @@
     "service-area",
     "homeshows",
     "about-us",
-    "testimonials"
+    "testimonials",
+    "free-estimate"
   );
 
   /**
@@ -54,13 +54,14 @@
    */
   // Temp work around for the city pages
   // This assumes that the city page is inside the services area and checking to see if the url is nested
-  $isCityPage = (strpos($thePage, 'service-area') !== false) && (strpos($thePage, '/') !== false);
+  # $isCityPage = (strpos($thePage, 'service-area') !== false) && (strpos($thePage, '/') !== false);
 
   /**
    * Function declarations
    * ======================
    */
   // Checks for substring matches in an array
+  // TODO: return the matching index
   function substr_in_array($haystack, $needle) {
     for($i = 0; $i < count($haystack); $i++) {
       $string_pos = strpos($needle, $haystack[$i]);
@@ -82,11 +83,8 @@
 
   if($thePage == "index") {
     $pageType = 'HOME';
-  } else if(($thePage != "index") && ($thePage != "free-estimate") && ($thePage != "free-estimate/confirmation")) {
-    $pageType = 'CONTENT';
-  } else if(($thePage == "free-estimate") || ($thePage == "free-estimate/confirmation")) {
-    // TODO: create free estimate styles
-    // $pageType = 'ESTIMATE';
+  } else if(substr_in_array($macroPages, $thePage)) {
+    // content is now partial and should only contain subset of the content styles
     $pageType = 'CONTENT';
   } else {
     /**
@@ -113,6 +111,7 @@
    * Selective Content (should render)
    * ====================
    * - Should render silo
+   * - Should render breadcrumbs
    * - Should render service areas
    */
   $showSilo = true;
@@ -120,7 +119,16 @@
     $showSilo = false;
   }
   
+  $showBreadcrumbs = true;
+  if(strpos($thePage, 'free-estimate') !== false) {
+    $showBreadcrumbs = false;
+  }
+  
   $showServiceAreas = true;
+  if((strpos($thePage, 'service-area') !== false) && (strpos($thePage, '/') !== false)) {
+    // Don't show service area section in service area pages
+    $showServiceAreas = false;
+  }
 
   /**
    * Selective styles & scripts
@@ -135,7 +143,6 @@
   $topInject = "";
   $bottomInject = "";
 
-  // TODO: ratther use array based on urls
   if($pageType == "HOME") {
     $topInject .= '<link rel="stylesheet" type="text/css" href="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/homepage.css">';
     $bottomInject .= '<script src="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/home.js"></script>';
@@ -777,10 +784,14 @@
       -->
       <? elseif ($pageType == "CONTENT"): ?>
       <!-- Content Section -->
-      <section class="content-template-article space-section <?= $showSilo ? "" : 'no-silo'; ?>">
+      <section
+        class="content-template-article space-section <?= $showSilo ? "" : 'no-silo'; ?> <?= $showBreadcrumbs ? "" : 'no-breadcrumbs'; ?>"
+      >
+        <? if($showBreadcrumbs): ?>
         <nav aria-label="Breadcrumb" class="content-template-breadcrumbs">
           [[breadcrumbs]]
         </nav>
+        <? endif; ?>
 
         <? if ($showSilo): ?>
         <aside class="content-template-silo">

@@ -155,15 +155,15 @@
       // Inject jquery
       $topInject .= '<script type="text/javascript" src="https://cdn.treehouseinternetgroup.com/cms_core/assets/js/jquery.min.js"></script>';
     }
-  }
 
-  // Inject some styles and scripts into document
-  if($isCityPage) {
-    // This is probably not needed
-    $topInject .= '<link rel="stylesheet" media="all" onload="this.media=\'all\'" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">';
-    
-    // Some widgets(Maps) still require jquery to be present
-    $topInject .= '<script type="text/javascript" src="https://cdn.treehouseinternetgroup.com/cms_core/assets/js/jquery.min.js"></script>';
+    // Inject some styles and scripts into document
+    if($isCityPage) {
+      // This is probably not needed
+      $topInject .= '<link rel="stylesheet" media="all" onload="this.media=\'all\'" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">';
+      
+      // Some widgets(Maps) still require jquery to be present
+      $topInject .= '<script type="text/javascript" src="https://cdn.treehouseinternetgroup.com/cms_core/assets/js/jquery.min.js"></script>';
+    }
   }
 
   /**
@@ -781,7 +781,7 @@
           <a class="button"> Get Your Free Estimate </a>
         </div>
       </section>
-
+      
       
       <!--
         Content Page

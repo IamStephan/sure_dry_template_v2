@@ -2,7 +2,7 @@
   /**
    * NOTE:
    * ======
-   * Could all of this be placed in the `before borders`?
+   * Could all of this be placed in the 'before borders'?
    * 
    * The $isCityPage variable does not work
    */
@@ -113,6 +113,10 @@
   
   $showServiceAreas = true;
 
+  // Temp work around for the city pages
+  // This assumes that the city page is inside the services area and checking to see if the url is nested
+  $isCityPage = (strpos($thePage, 'service-area') !== false) && (strpos($thePage, '/') !== false);
+
   /**
    * Selective styles & scripts
    * ====================
@@ -123,17 +127,26 @@
    * a style tag. Stylesheets can then be hosted
    * on the file manager (CDN)
    */
-  $stylesToLoad = "";
-  $scriptsToLoad = "";
+  $topInject = "";
+  $bottomInject = "";
 
   // TODO: ratther use array based on urls
   if($pageType == "HOME") {
-    $stylesToLoad .= '<link rel="stylesheet" type="text/css" href="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/homepage.css">';
-    $scriptsToLoad .= '<script src="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/home.js"></script>';
+    $topInject .= '<link rel="stylesheet" type="text/css" href="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/homepage.css">';
+    $bottomInject .= '<script src="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/home.js"></script>';
   } elseif ($pageType == "CONTENT") {
     // TODO: inject proper macro styles
-    $stylesToLoad .= '<link rel="stylesheet" type="text/css" href="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/content.css">';
-    $scriptsToLoad .= '<script src="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/content.js"></script>';
+    $topInject .= '<link rel="stylesheet" type="text/css" href="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/content.css">';
+    $bottomInject .= '<script src="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/content.js"></script>';
+  }
+
+  // Inject some styles and scripts into document
+  if($isCityPage) {
+    // This is probably not needed
+    $topInject .= '<link rel="stylesheet" media="all" onload="this.media=\'all\'" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">';
+    
+    // Some widgets(Maps) still require jquery to be present
+    $topInject .= '<script type="text/javascript" src="https://cdn.treehouseinternetgroup.com/cms_core/assets/js/jquery.min.js"></script>';
   }
 
   /**
@@ -200,12 +213,7 @@
     <link rel="stylesheet" type="text/css" href="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/template.css">
 
     <!-- Selected styles -->
-    <?= $stylesToLoad; ?>
-
-    <!-- City Page core styles -->
-    <? if($isCityPage): ?>
-    [[custom_core_v3_9]]
-    <? endif; ?>
+    <?= $topInject; ?>
   </head>
 
   <body>
@@ -877,7 +885,7 @@
     </footer>
 
     <!-- Selected scripts -->
-    <?= $scriptsToLoad; ?>
+    <?= $bottomInject; ?>
 
     <!-- City Page core scripts -->
     <? if($isCityPage): ?>

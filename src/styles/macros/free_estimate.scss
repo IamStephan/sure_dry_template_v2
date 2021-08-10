@@ -11,7 +11,7 @@
     }
 
     .step {
-      @apply relative border-none ring-1 ring-gray-900 ring-opacity-10 rounded-md
+      @apply relative border-none ring-1 ring-gray-900 ring-opacity-10 rounded-md pb-[1px]
         sm:w-full;
 
       &.current {
@@ -46,8 +46,10 @@
         }
       }
 
+      // This can a button or input
+      // Why?.... ¯\_(ツ)_/¯
       .next {
-        @apply block float-none w-[calc(100%-32px)] mx-4 px-0 py-2 mb-6 appearance-none bg-primary text-white font-bold ring-primary cursor-pointer;
+        @apply block rounded-md float-none w-[calc(100%-32px)] mx-4 px-0 py-2 mb-6 appearance-none bg-primary text-white font-semibold ring-primary cursor-pointer;
       }
     }
   }

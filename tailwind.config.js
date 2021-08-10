@@ -53,6 +53,9 @@ module.exports = {
     require("@tailwindcss/typography"),
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/line-clamp"),
+    require("@tailwindcss/forms")({
+      strategy: "class",
+    }),
     plugin(function ({ addBase }) {
       const essential_base = {
         ".bg-index": { zIndex: "-1" },

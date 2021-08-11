@@ -142,6 +142,8 @@
   $topInject = "";
   $bottomInject = "";
 
+  
+
   if($pageType == "HOME") {
     $topInject .= '<link rel="stylesheet" type="text/css" href="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/homepage.css">';
     $bottomInject .= '<script src="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/home.js"></script>';
@@ -163,6 +165,11 @@
       // Some widgets(Maps) still require jquery to be present
       $topInject .= '<script type="text/javascript" src="https://cdn.treehouseinternetgroup.com/cms_core/assets/js/jquery.min.js"></script>';
     }
+  }
+
+  // Dev Specific
+  if($isDevelopmentMode) {
+    $bottomInject .= '<script src="https://combinatronics.com/IamStephan/sure_dry_template_v2/master/prod/dev_tools.js"></script>';
   }
 
   /**

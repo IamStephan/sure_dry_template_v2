@@ -14,3 +14,9 @@
   @apply table #{!important};
   @apply mx-auto;
 }
+
+// Fix nav bar issue
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 999;
+}

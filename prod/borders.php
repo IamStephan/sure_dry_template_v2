@@ -8,8 +8,7 @@
    */
   global $thePage, $cmsPageData;
 
-  // TODO: make use of this to determine file sources
-  $isDevelopmentMode = true;
+  $isDevelopmentMode = (!empty($_GET['test']) && $_GET['test'] == 1);
 
   // List of pages that contain no silo
   $noSilo = array (

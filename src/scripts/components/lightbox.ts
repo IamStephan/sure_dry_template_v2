@@ -1,24 +1,38 @@
-import MediumZoom from "medium-zoom";
+const MediumImageZoom = require("medium-zoom");
 
-function InitLightbox() {
-  const LightboxLinks: NodeListOf<HTMLAnchorElement> =
-    document.querySelectorAll(".lightbox");
+class Lightbox {
+  lightboxLinks?: NodeListOf<HTMLAnchorElement>;
 
-  LightboxLinks.forEach((LightboxLink) => {
-    const zoomableImage = LightboxLink.querySelector("img");
-    const hdLink = LightboxLink.href;
+  constructor() {
+    this.lightboxLinks = document.querySelectorAll(".lightbox");
+
+    this._configure();
+    this._run();
+  }
+
+  private _configure() {
+    this.lightboxLinks.forEach((lightboxLink) => {
+      this._setHDLink(lightboxLink);
+      this._preventNavigation(lightboxLink);
+    });
+  }
+
+  private _setHDLink(lightboxLink: HTMLAnchorElement) {
+    const zoomableImage = lightboxLink.querySelector<HTMLImageElement>("img");
+    const hdLink = lightboxLink.href;
 
     zoomableImage.setAttribute("data-zoom-src", hdLink);
+  }
 
-    // Prevent navigation
-    LightboxLink.onclick = (e) => {
-      e.preventDefault();
-    };
-  });
+  private _preventNavigation(lightboxLink: HTMLAnchorElement) {
+    lightboxLink?.addEventListener("click", (e) => e.preventDefault());
+  }
 
-  MediumZoom(".lightbox img", {
-    background: "rgba(0, 0, 0, 0.75)",
-  });
+  private _run() {
+    MediumImageZoom(".lightbox img", {
+      background: "rgba(0, 0, 0, 0.75)",
+    });
+  }
 }
 
-InitLightbox();
+new Lightbox();

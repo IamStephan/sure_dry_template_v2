@@ -4,7 +4,7 @@ export class NavigationPlugin {
   rootGUI: GUI;
 
   params = {
-    enabled: true,
+    enabled: window.location.hostname !== "localhost",
     appendUrl: "?cache=0&dev_template=1&test=1",
     openProd: this.openProd,
   };
@@ -37,7 +37,6 @@ export class NavigationPlugin {
 
     LinkTags.forEach((linkElem) => {
       linkElem?.addEventListener("click", this.linkAction.bind(this));
-      console.log("attaching");
     });
   }
 

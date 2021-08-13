@@ -1,3 +1,12 @@
 .medium-zoom-image--opened {
   @apply rounded-sm ring-opacity-0;
 }
+
+// Fix nav bar issue
+.medium-zoom-overlay {
+  z-index: 2;
+}
+
+.medium-zoom-image--opened {
+  z-index: 11;
+}

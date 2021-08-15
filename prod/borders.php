@@ -53,7 +53,7 @@
    */
   // Temp work around for the city pages
   // This assumes that the city page is inside the services area and checking to see if the url is nested
-  # $isCityPage = (strpos($thePage, 'service-area') !== false) && (strpos($thePage, '/') !== false);
+  $isCityPage = (strpos($thePage, 'service-area') !== false) && (strpos($thePage, '/') !== false);
 
   /**
    * Function declarations
@@ -160,6 +160,7 @@
     // Inject some styles and scripts into document
     if($isCityPage) {
       // This is probably not needed
+      $topInject .= '<link rel="stylesheet" as="style" onload="this.rel=\'stylesheet\'" href="https://cdn.treehouseinternetgroup.com/cms_core/assets/core-template.css">';
       $topInject .= '<link rel="stylesheet" media="all" onload="this.media=\'all\'" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">';
       
       // Some widgets(Maps) still require jquery to be present

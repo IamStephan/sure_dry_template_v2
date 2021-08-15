@@ -4,7 +4,7 @@
     "posthtml-inline-svg": {},
     "posthtml-expressions": {
       "locals": {
-        "showSilo": true,
+        "showSilo": false,
         "showBreadcrumbs": true
       }
     },

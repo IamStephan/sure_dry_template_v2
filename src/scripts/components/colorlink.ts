@@ -4,7 +4,7 @@
  * The name is misleading. This is essentially just a modal type component
  * that gives more information about a certain item
  */
-const MediumTemplateZoom = require("medium-zoom");
+import { zoomable } from "./zoom";
 
 class Colorlink {
   colorLinks?: NodeListOf<HTMLAnchorElement>;
@@ -93,7 +93,7 @@ class Colorlink {
   }
 
   private _run() {
-    this.zoomInstance = MediumTemplateZoom(".colorlink img", {
+    this.zoomInstance = zoomable(".colorlink img", {
       template: `#${this.templateOptions.templateID}`,
       container: `#${this.templateOptions.imageContainerID}`,
       background: "rgba(0, 0, 0, 0.75)",
@@ -101,9 +101,9 @@ class Colorlink {
   }
 
   private _handleEvents() {
-    this.zoomInstance.on("open", this._setColorLinkContent.bind(this));
+    this.zoomInstance?.on("open", this._setColorLinkContent.bind(this));
 
-    this.zoomInstance.on("closed", () => {
+    this.zoomInstance?.on("closed", () => {
       document.body.style.overflow = "auto";
     });
   }

@@ -1,4 +1,4 @@
-const MediumImageZoom = require("medium-zoom");
+import { zoomable } from "./zoom";
 
 class Lightbox {
   lightboxLinks?: NodeListOf<HTMLAnchorElement>;
@@ -29,7 +29,7 @@ class Lightbox {
   }
 
   private _run() {
-    MediumImageZoom(".lightbox img", {
+    zoomable(".lightbox img", {
       background: "rgba(0, 0, 0, 0.75)",
     });
   }

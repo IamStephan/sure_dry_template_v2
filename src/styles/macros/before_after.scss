@@ -22,7 +22,7 @@
             @apply relative aspect-w-4 aspect-h-3;
 
             .before_after_photo {
-              @apply rounded-none rounded-l-md sm:rounded-none sm:rounded-t-md;
+              @apply rounded-none rounded-l-md sm:rounded-none sm:rounded-t-md object-cover;
             }
 
             .before_after_left_status {
@@ -37,7 +37,7 @@
             @apply relative aspect-w-4 aspect-h-3;
 
             .before_after_photo {
-              @apply rounded-none rounded-r-md sm:rounded-none sm:rounded-b-md;
+              @apply rounded-none rounded-r-md sm:rounded-none sm:rounded-b-md object-cover;
             }
 
             .before_after_right_status {

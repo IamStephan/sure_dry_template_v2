@@ -97,6 +97,7 @@ class Colorlink {
       template: `#${this.templateOptions.templateID}`,
       container: `#${this.templateOptions.imageContainerID}`,
       background: "rgba(0, 0, 0, 0.75)",
+      margin: 32,
     });
   }
 

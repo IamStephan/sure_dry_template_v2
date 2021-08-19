@@ -31,6 +31,7 @@ class Lightbox {
   private _run() {
     zoomable(".lightbox img", {
       background: "rgba(0, 0, 0, 0.75)",
+      margin: 32,
     });
   }
 }

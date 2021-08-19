@@ -110,6 +110,11 @@
 
         @screen sm {
           width: 30px;
+
+          * {
+            max-width: 100%;
+            height: auto;
+          }
         }
       }
 

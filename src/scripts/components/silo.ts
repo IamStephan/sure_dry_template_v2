@@ -17,4 +17,8 @@ function InitMobileSilo(): void {
   });
 }
 
-InitMobileSilo();
+try {
+  InitMobileSilo();
+} catch (e) {
+  console.error(`Could not init Silo: ${e}`);
+}

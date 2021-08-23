@@ -19,4 +19,8 @@ function InitContentSelector(): void {
   });
 }
 
-InitContentSelector();
+try {
+  InitContentSelector();
+} catch (e) {
+  console.error(`Could not init Content Selector: ${e}`);
+}

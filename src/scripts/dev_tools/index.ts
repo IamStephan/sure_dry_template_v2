@@ -59,4 +59,8 @@ class DevTools {
   private _createStorage() {}
 }
 
-new DevTools();
+try {
+  new DevTools();
+} catch (e) {
+  console.error(`Could not init Devtools: ${e}`);
+}

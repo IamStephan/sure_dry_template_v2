@@ -36,4 +36,8 @@ class Lightbox {
   }
 }
 
-new Lightbox();
+try {
+  new Lightbox();
+} catch (e) {
+  console.error(`Could not init Lightbox: ${e}`);
+}

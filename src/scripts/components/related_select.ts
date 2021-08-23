@@ -5,8 +5,8 @@ function InitRelatedSelector(): void {
     /**
      * NOTE:
      * =====
-     * When the value is null is means
-     * that the its the current page (Or selected item)
+     * When the value is 0 it means
+     * that its the current page (Or selected item)
      * or the default value ('Please select topic')
      */
     if (selector.value !== "0") {

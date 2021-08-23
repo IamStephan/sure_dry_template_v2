@@ -110,4 +110,8 @@ class Colorlink {
   }
 }
 
-new Colorlink();
+try {
+  new Colorlink();
+} catch (e) {
+  console.error(`Could not init Colorlink: ${e}`);
+}

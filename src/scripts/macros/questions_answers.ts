@@ -75,4 +75,8 @@ function InitQA() {
   });
 }
 
-InitQA();
+try {
+  InitQA();
+} catch (e) {
+  console.error(`Could not init QA: ${e}`);
+}

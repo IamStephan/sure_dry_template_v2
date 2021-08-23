@@ -72,4 +72,8 @@ function InitAccordion() {
   });
 }
 
-InitAccordion();
+try {
+  InitAccordion();
+} catch (e) {
+  console.error(`Could not init Accordion: ${e}`);
+}

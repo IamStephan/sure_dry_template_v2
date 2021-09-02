@@ -339,21 +339,21 @@
           <div class="image-set-container">
             <div class="image-one">
               <img class="object-cover- img"
-                src="https://cdn.treehouseinternetgroup.com/cms_images/101/man-1.186848b3.png" />
+                src="https://cdn.treehouseinternetgroup.com/cms_images/101/hero_3.jpg" />
             </div>
             <div class="image-two">
               <img class="object-cover- img"
-                src="https://cdn.treehouseinternetgroup.com/cms_images/101/man-2.c0057ac5.png" />
+                src="https://cdn.treehouseinternetgroup.com/cms_images/101/hero_2.jpg" />
             </div>
           </div>
           <div class="image-set-container">
             <div class="image-three">
               <img class="object-cover- img"
-                src="https://cdn.treehouseinternetgroup.com/cms_images/101/hands-1.57e0fade.png" />
+                src="	https://cdn.treehouseinternetgroup.com/cms_images/101/hero_4.jpg" />
             </div>
             <div class="image-four">
               <img class="object-cover- img"
-                src="https://cdn.treehouseinternetgroup.com/cms_images/101/hands-2.4a235842.png" />
+                src="	https://cdn.treehouseinternetgroup.com/cms_images/101/hero_1.jpg" />
             </div>
           </div>
         </div>
@@ -658,7 +658,7 @@
             </div>
 
             <div class="feautures-card-main-image">
-              <img class="object-cover- img" src="https://cdn.treehouseinternetgroup.com/cms_images/101/company-people.40c7fc02.png" />
+              <img class="object-cover- img" src="https://cdn.treehouseinternetgroup.com/cms_images/101/company_people.jpg" />
             </div>
 
             <div class="featured-card-content">
@@ -752,7 +752,7 @@
       <section class="about space-section">
         <h2 class="about-title">Exceptional Quality and Service Since 1994</h2>
         <h3 class="about-subtitle">
-          OVER 25,000 SATISFIED SURE-DRY CUSTOMERS IN NORTHEAST AND CENTRAL
+          OVER 27,000 SATISFIED SURE-DRY CUSTOMERS IN NORTHEAST AND CENTRAL
           WISCONSIN
         </h3>
         <p class="about-content">
